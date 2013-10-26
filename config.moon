@@ -5,6 +5,6 @@ config 'development', ->
 	code_cache 'off'
 
 config 'production', ->
-	port 80
+	port os.getenv "PORT"
 	num_workers 4
 	code_cache 'on'
