@@ -1,1 +1,1 @@
-web: lapis server production
+web: moonc .; moonc views/; moonc models; lapis server production
