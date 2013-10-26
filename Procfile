@@ -1,1 +1,1 @@
-web: lapis server
+web: lapis server production
