@@ -3,5 +3,6 @@ dependencies = {
 	"https://github.com/jtarchie/underscore-lua/blob/master/underscore-dev-1.rockspec",
 	"lua-discount",
 	"moonscript",
-	"lapis"
+	"lapis",
+	"lapis_console"
 }
