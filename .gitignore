@@ -4,3 +4,4 @@ nginx.conf.compiled
 .tup
 *_temp/
 .DS_Store
+debug/

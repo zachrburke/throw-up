@@ -20,7 +20,7 @@ class Layout extends Widget
 						div ->
 							small "var up = new Exception();"
 							h3  "throw up;"
-					
+
 					section ->
 						 ul ->
 							li ->

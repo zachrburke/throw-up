@@ -7,8 +7,10 @@ class Index extends Widget
 	content: =>
 		article ->
 			section ->
+				
 				if @Post
 					small 'posted sometime around ' .. @Post.PubDate 
+
 				unless @errors
 					raw @PostBody
 					@RenderDisqus!
