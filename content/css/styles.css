@@ -17,6 +17,7 @@ header { margin: 0 auto .2em; max-width: 1024px; height: 100px; background-color
 header hgroup { width: 90%; float: left; }
 header hgroup h3 { margin-bottom: 0; }
 header hgroup div {  padding: 20px; }
+header hgroup small { display: block; }
 
 header section { width: 10%; float: left; }
 header section li { text-decoration: none; list-style: none; line-height: 1.2; }
@@ -27,6 +28,7 @@ header section ul { float: right; padding-right: 20px; }
 .content article { float: left; width: 80%; padding-right: 5px;  }
 .content article h2 { margin-bottom: 0.425em; }
 .content article section { background-color: rgba(255, 255, 255, 0.7); padding: 20px; }
+.content article small { display: block; margin-bottom: 5px;}
 
 .content aside { float: left; width: 20%; padding-right: 0; }
 .content aside a { display: block; text-decoration: none; font-size: 0.85rem}

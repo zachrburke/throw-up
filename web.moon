@@ -22,7 +22,8 @@ lapis.serve class extends lapis.Application
 			return post.Slug == @params.slug
 
 		unless @Post then @app\ThrowUp!
-
+		
+		@Title = @Post.Title
 		@PostBody = @app\GetPostBodyByName @Post.FileName
 
 		render: true

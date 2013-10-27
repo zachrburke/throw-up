@@ -11,14 +11,15 @@ class Layout extends Widget
 				link rel: "stylesheet", href: '/content/css/styles.css'
 				link rel: "stylesheet", href: '/content/css/default.css'
 				link rel: "stylesheet", href: '/content/css/socialicious.css'
-				title "throw up;"
+				link rel: "icon", href: '/content/images/barf.ico'
+				title if @Title then @Title else 'throw up;'
 
 			body -> 
 				header ->
 					hgroup ->
 						div ->
-							h3  "throw up;"
 							small "var up = new Exception();"
+							h3  "throw up;"
 					
 					section ->
 						 ul ->
