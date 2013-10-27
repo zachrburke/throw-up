@@ -14,8 +14,11 @@ class Index extends Widget
 		aside ->
 			section ->
 
+				className = ''
+
 				for i, post in ipairs @PostList
-					className = if post.Slug == @Post.Slug then 'selected' else ''
+					if @Post
+						className = if post.Slug == @Post.Slug then 'selected' else ''
 
 					a href: '/' .. post.Slug, class: className, ->
 						text post.Title

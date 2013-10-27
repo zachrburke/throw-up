@@ -20,15 +20,15 @@ lapis.serve class extends lapis.Application
 		@Post = _.find PostList, (post) ->
 			return post.Slug == @params.slug
 
-		unless @Post then @throwUp!
+		unless @Post then @app\ThrowUp!
 
-		@PostBody = @app\getPostBodyByName @Post.FileName
+		@PostBody = @app\GetPostBodyByName @Post.FileName
 
 		render: true
 
 	[console: '/debug/console']: console.make!
 
-	getPostBodyByName: (name) =>
+	GetPostBodyByName: (name) =>
 		path = 'content/blog/' .. name 
 		markdown = ''
 
@@ -36,11 +36,11 @@ lapis.serve class extends lapis.Application
 			io.input path
 			markdown = discount(io.read '*all')
 
-		if error then @throwUp!
+		if error then @ThrowUp!
 
 		return markdown	
 
-	throwUp: (error) =>
+	ThrowUp: (error) =>
 		unless error then yield_error "bluuuuugggh<br>haven't written that one yet"
 		yield_error error
 
