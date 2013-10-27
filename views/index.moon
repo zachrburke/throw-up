@@ -1,6 +1,6 @@
 import Widget from require 'lapis.html'
 
-luahtml = require 'lib.luahtml.init'
+luahtml = require 'luahtml'
 
 class Index extends Widget
 
@@ -29,6 +29,8 @@ class Index extends Widget
 	RenderDisqus: =>
 		status, error = pcall ->
 			raw luahtml.open('templates/disqus.html', { slug: @Post.Slug })
+
+		raw error
 
 		
 

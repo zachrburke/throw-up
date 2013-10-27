@@ -1,5 +1,4 @@
 *.lua
-!lib/luahtml/init.lua
 logs/
 nginx.conf.compiled
 .tup
