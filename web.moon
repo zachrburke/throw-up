@@ -42,7 +42,7 @@ lapis.serve class extends lapis.Application
 		return markdown	
 
 	ThrowUp: (error) =>
-		unless error then yield_error "bluuuuugggh<br>haven't written that one yet"
+		unless error then yield_error "BARF!<br>I haven't written that one yet"
 		yield_error error
 
 	
