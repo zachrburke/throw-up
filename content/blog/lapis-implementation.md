@@ -33,24 +33,52 @@ One thing that concerned me about using Lapis was lack of robustness when dealin
       :value()
     => "moe is 21"
 
-Lapis has it's own idea of how to create a views which I'm sure some of you will find a bit wacky.  Here is a snippet of the code used to generate the view for this very page
+Lapis has it's own idea of how to create a view which I'm sure some of you will find a bit wacky.  Here is a snippet of the code used in my layout
 
     content: =>
-      article class: 'some_class', id: 'some_id' ->
-        section ->
-          
-          if @Post
-            small 'posted sometime around ' .. @Post.PubDate 
+        html_5 ->
 
-          unless @errors
-            raw @PostBody # raw dumps text as straight html
-            @RenderDisqus!
+          head -> 
+            link rel: "icon", href: '/content/images/barf.ico'
+            title if @Title then @Title else 'throw up;'
 
-So what is this?  Well, this is moonscript.  What we have here is a very clever use of moonscript syntax.  I have a view called Index, and in that view I have a content method which defines a template for my view.  from there you can call just about any method you want, and if that method name isn't defined somewhere then it will be reflected into an html element.  The first parameter can be a table defining any number of attributes you want attached to that element.  You can pass in a callback that will generate output to be nested in that element, or for brevity, you can pass in a single value if you only want a small amount of content to be stored in that element. 
+          body -> 
+            header ->
+              hgroup ->
+                div ->
+                  small "var up = new Exception();"
+                  h3  "throw up;"
+
+              section ->
+                 ul ->
+                  li ->
+                    a href: 'http://twitter.com/zach_no_beard', target: '_blank', ->
+                      i class: 'icon-twitter'
+                  li ->
+                    a href: 'https://github.com/zach-binary', target: '_blank', ->
+                      i class: 'icon-github'
+                  li ->
+                    a href: 'http://ren.itch.io', target: '_blank', ->
+                      small 'itch'
+
+So what is this?  Well, this is moonscript.  What we have here is a very clever use of moonscript syntax.  I have a view called Index, and in that view I have a content method which defines a template for my view.  From there you can call just about any method you want, and if that method name isn't defined somewhere then it will be reflected into an html element.  The first parameter can be a table defining any number of attributes you want attached to that element.  You can pass in a callback that will generate output to be nested in that element, or for brevity, you can pass in a single value if you only want a small amount of content to be stored in that element.  The result is a templating language that resembles [Jade](http://jade-lang.com/)
 
 This is an interesting approach since most people would hand you a view and say "it's just data", but here I'm handing you a view and I'm saying "it's just code."  At the same time, I can see how this approach could be very powerful, yet it's clean and understandable.  It may be considered overkill for view generation though.  
 
 If this approach is too magical, then you can always introduce a templating engine.  Here I use a template to render the disqus widget because dumping the html for that in my moonscript views looked pretty ugly to me.  
+
+    content: =>
+        article ->
+          section ->
+            
+            if @Post
+              small 'posted sometime around ' .. @Post.PubDate 
+
+            unless @errors
+              raw @PostBody
+              @RenderDisqus!
+            else 
+              raw @errors
 
     RenderDisqus: => 
       status, error = pcall ->
@@ -59,13 +87,15 @@ If this approach is too magical, then you can always introduce a templating engi
 
 The full code is up on github.  I'm happy to say I was able to hit my page load goal of under 50ms.  The building openresty page clocks in between 20-25ms pre-disqus when running with production settings on my local machine.  
 
+I would like to note that Lapis has a pretty slick looking integration with PostGres SQL.  I may consider changing my storage approach later to leverage that.  
+
 #### Life without a debugger
 
 Moonscript is still a new language and as a result, advanced features like a repl have not been implemented yet.  As a result, that means there is no way (that I know of anyway) to step through code using a debugger.  
 
 Lapis attempts to combat this with a web console you can route to from your lapis application.  One thing you get from this is the ability to unfold and see what is in your tables, which the lua/moonscript console doesn't do.  
 
-Still, I found it easier to add a debug directory to my project and populate that with scripts when any form of advanced investigation of my objects was necessary.  This way I can write code with Sublime.  I would prefer debugger much more though ;-)
+Still, I found it easier to add a debug directory to my project and populate that with scripts when any form of advanced investigation of my objects was necessary.  This way I can write code with Sublime.  I would prefer a debugger much more though ;-)
 
 My next post I'll write about deployment.
 
