@@ -6,7 +6,6 @@ class Layout extends Widget
 		html_5 ->
 
 			head -> 
-				meta name: "viewport", content: "width=device-width, initial-scale=1.0"
 				link rel: "stylesheet", href: '/content/css/typeplate.css'
 				link rel: "stylesheet", href: '/content/css/styles.css'
 				link rel: "stylesheet", href: '/content/css/default.css'
