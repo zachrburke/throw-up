@@ -29,7 +29,7 @@ class Layout extends Widget
 								a href: 'https://github.com/zach-binary', target: '_blank', ->
 									i class: 'icon-github'
 							li ->
-								a href: 'https://ren.itch.io', target: '_blank', ->
+								a href: 'http://ren.itch.io', target: '_blank', ->
 									small 'itch'
 
 
