@@ -13,7 +13,7 @@ lapis.serve class extends lapis.Application
 	layout: require 'views.layout'
 
 	[loopback: '/']: =>
-		redirect_to: '/building-openresty'
+		redirect_to: '/lapis-implementation'
 
 	[index: "/:slug"]: capture_errors =>
 
