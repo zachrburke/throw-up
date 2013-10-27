@@ -1,6 +1,6 @@
 import Widget from require 'lapis.html'
 
-luahtml = require 'luahtml'
+luahtml = require 'lib.luahtml.init'
 
 class Index extends Widget
 
