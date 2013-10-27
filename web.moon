@@ -5,6 +5,7 @@ console = require 'lapis.console'
 discount = require 'discount'
 _ = require 'underscore'
 PostList = require 'models.postList'
+config = require('lapis.config').get!
 
 
 lapis.serve class extends lapis.Application
@@ -29,7 +30,7 @@ lapis.serve class extends lapis.Application
 	[console: '/debug/console']: console.make!
 
 	GetPostBodyByName: (name) =>
-		path = 'content/blog/' .. name 
+		path = config.blogFilePath .. name 
 		markdown = ''
 
 		status, error = pcall ->
