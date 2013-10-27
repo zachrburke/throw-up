@@ -12,7 +12,7 @@ article, aside, header {
 
 body { background-color: rgb(245, 245, 245); }
 
-pre code { word-wrap: normal; }
+pre code { word-wrap: normal; overflow: scroll; }
 
 header { margin: 0 auto .2em; max-width: 1024px; height: 100px; background-color: rgba(255, 255, 255, 0.7);}
 
