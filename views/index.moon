@@ -1,6 +1,6 @@
 import Widget from require 'lapis.html'
 
-luahtml = require 'luahtml'
+etlua = require 'etlua'
 
 class Index extends Widget
 
@@ -32,7 +32,9 @@ class Index extends Widget
 
 	RenderDisqus: =>
 		status, error = pcall ->
-			raw luahtml.open('templates/disqus.html', { slug: @Post.Slug })
+			io.input 'templates/disqus.html'
+			template = etlua.compile(io.read('*all'))
+			raw template { slug: @Post.Slug }
 
 		raw error
 
