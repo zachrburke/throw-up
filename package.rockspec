@@ -5,5 +5,5 @@ dependencies = {
 	"https://raw.github.com/zach-binary/LuaHTML/master/luahtml-1.1.1-1.rockspec",
 	"lua-discount",
 	"moonscript",
-	"lapis",
+	"lapis"
 }
