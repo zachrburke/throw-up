@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+
+      Keen.configure({
+          projectId: "527056acd97b8537dc000005",
+          writeKey: "e33137a566eba3be0c65d3ff3eb55fa771a2cb80d32cb08e170287e27d1317bc18e5a215160a538a30ac1a8670e0fc643c0661065e65f89f5e5356d4b8dd59ed6999e4268d5e05d8032c43a1a149ce6928da11c861a6a53a1665129d30cdcce13d319119220d7c3b5ef2670749971357", // required for sending events
+          readKey: "ba0ef154b30108c333995629a8c1f58687e057783e3b06cf02f0522996c3c08c966d288592f8593249e9f48663503bcb6b8daa4673c9dc6c4c860c3a6707239f1642aa68b8c89cb442c96f49c18789d392326786d37eec66a8735674c1aaac8bbb8eb1303c3f2ac2a1d58282941de616"    // required for doing analysis
+      });
+
+      Keen.addEvent("page_hit", { page: "<%= slug %>" });
+</script>

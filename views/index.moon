@@ -13,7 +13,7 @@ class Index extends Widget
 
 				unless @errors
 					raw @PostBody
-					@RenderDisqus!
+					@Render 'templates/disqus.html', { slug: @Post.Slug }
 				else 
 					raw @errors
 
@@ -30,13 +30,15 @@ class Index extends Widget
 						text post.Title
 					small post.PubDate
 
-	RenderDisqus: =>
-		status, error = pcall ->
-			io.input 'templates/disqus.html'
-			template = etlua.compile(io.read('*all'))
-			raw template { slug: @Post.Slug }
+			if @Environment != 'development'
+				@Render 'templates/track_page.html', { slug: @Post.Slug }
 
-		raw error
+
+	Render: (templateName, data) =>
+		status, error = pcall ->
+			io.input templateName
+			template = etlua.compile(io.read('*all'))
+			raw template data
 
 		
 

@@ -13,7 +13,7 @@ lapis.serve class extends lapis.Application
 	layout: require 'views.layout'
 
 	[loopback: '/']: =>
-		redirect_to: '/lapis-implementation'
+		redirect_to: '/deploying-to-heroku'
 
 	[index: "/:slug"]: capture_errors =>
 
@@ -25,6 +25,7 @@ lapis.serve class extends lapis.Application
 		
 		@Title = @Post.Title
 		@PostBody = @app\GetPostBodyByName @Post.FileName
+		@Environment = config._name
 
 		render: true
 
