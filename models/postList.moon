@@ -1,6 +1,12 @@
 
 return {
 	{
+		Title: "SOLR in Lua/Moonscript using SPORE"
+		Slug: "solr-spore"
+		FileName: "solr-spore.md"
+		PubDate: "November 14, 2013"
+	}
+	{
 		Title: "Blogging With Lapis, Deploying to Heroku"
 		Slug: "deploying-to-heroku"
 		FileName: "deploying-to-heroku.md"

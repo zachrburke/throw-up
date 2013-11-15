@@ -5,3 +5,4 @@ nginx.conf.compiled
 *_temp/
 .DS_Store
 debug/
+content/.DS_Store
