@@ -13,7 +13,7 @@ lapis.serve class extends lapis.Application
 	layout: require 'views.layout'
 
 	[loopback: '/']: =>
-		redirect_to: '/deploying-to-heroku'
+		redirect_to: PostList[1].Slug
 
 	[index: "/:slug"]: capture_errors =>
 
