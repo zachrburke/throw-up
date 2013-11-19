@@ -7,5 +7,9 @@
           readKey: "ba0ef154b30108c333995629a8c1f58687e057783e3b06cf02f0522996c3c08c966d288592f8593249e9f48663503bcb6b8daa4673c9dc6c4c860c3a6707239f1642aa68b8c89cb442c96f49c18789d392326786d37eec66a8735674c1aaac8bbb8eb1303c3f2ac2a1d58282941de616"    // required for doing analysis
       });
 
-      Keen.addEvent("page_hit", { page: "<%= slug %>" });
+      Keen.addEvent("page_hit", { 
+      	page: "<%= slug %>", 
+      	referer: document.referrer, 
+      	userAgent: navigator.userAgent 
+      });
 </script>

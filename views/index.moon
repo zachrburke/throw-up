@@ -30,8 +30,7 @@ class Index extends Widget
 						text post.Title
 					small post.PubDate
 
-			if @Environment != 'development'
-				@Render 'templates/track_page.html', { slug: @Post.Slug }
+			@Render 'templates/google_analytics.html'
 
 
 	Render: (templateName, data) =>
