@@ -1,6 +1,12 @@
 
 return {
 	{
+		Title: "Benefits of the article Tag"
+		Slug: "benefits-of-article"
+		FileName: "benefits-of-article.md"
+		PubDate: "December 22, 2013"
+	}
+	{
 		Title: "SOLR in Lua/Moonscript using SPORE"
 		Slug: "solr-spore"
 		FileName: "solr-spore.md"
@@ -17,7 +23,7 @@ return {
 		Slug: "lapis-implementation"
 		FileName: "lapis-implementation.md"
 		PubDate: "October 27, 2013"
-	},
+	}
 	{
 		Title: "Blogging With Lapis, Building Openresty"
 		Slug: "building-openresty"

@@ -1,7 +1,7 @@
 import config from require 'lapis.config'
 
 config 'development', ->
-	port 8080
+	port 8081
 	code_cache 'off'
 
 	blogFilePath 'content/blog/'

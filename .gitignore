@@ -6,3 +6,4 @@ nginx.conf.compiled
 .DS_Store
 debug/
 content/.DS_Store
+run.cmd

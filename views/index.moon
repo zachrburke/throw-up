@@ -5,17 +5,18 @@ etlua = require 'etlua'
 class Index extends Widget
 
 	content: =>
-		article ->
-			section ->
+		section ->
+			article ->
 				
-				if @Post
+				if @Post and @errors == nil
 					small 'posted sometime around ' .. @Post.PubDate 
-
-				unless @errors
 					raw @PostBody
-					@Render 'templates/disqus.html', { slug: @Post.Slug }
-				else 
+				else
 					raw @errors
+
+			div class: 'Disqus', ->
+				unless @errors
+					@Render 'templates/disqus.html', { slug: @Post.Slug }
 
 		aside ->
 			section ->
@@ -30,7 +31,8 @@ class Index extends Widget
 						text post.Title
 					small post.PubDate
 
-			@Render 'templates/google_analytics.html'
+			if @Environment != 'development'
+				@Render 'templates/google_analytics.html'
 
 
 	Render: (templateName, data) =>
