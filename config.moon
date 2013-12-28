@@ -12,3 +12,5 @@ config 'production', ->
 	code_cache 'on'
 
 	blogFilePath 'content/blog/'
+
+-- test
