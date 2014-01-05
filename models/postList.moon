@@ -1,6 +1,12 @@
 
 return {
 	{
+		Title: "Cleaning up, moonc -t and Guard"
+		Slug: "cleaning-up"
+		FileName: "cleaner-workflow.md"
+		PubDate: "January 4 (barely), 2014"
+	}
+	{
 		Title: "Benefits of the article Tag"
 		Slug: "benefits-of-article"
 		FileName: "benefits-of-article.md"
