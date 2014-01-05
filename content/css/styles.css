@@ -6,11 +6,7 @@ hgroup, .content > section, aside, header, header section {
 
 blockquote { font-style: italic; }
 
-.content > section, aside, header {
-	-moz-box-shadow: -3px 3px 5px #ccc;
-	-webkit-box-shadow: -3px 3px 5px #ccc;
-	box-shadow: -3px 3px 5px #ccc;
-}
+aside, header { border: 1px solid #ddd; }
 
 body { background-color: rgb(245, 245, 245); }
 
@@ -28,13 +24,13 @@ header section li { text-decoration: none; list-style: none; line-height: 1.2; }
 header section ul { float: right; padding-right: 20px; margin: 16px 0;}
 header section li img { width: 22px; height: 22px;}
 
-.content { max-width: 1024px; margin: auto; }
+.content { max-width: 1024px; margin: 0 auto 10px; }
 
 .content > section { float: left; width: 80%; padding-right: 5px;  }
 .content > section h2 { margin-bottom: 0.425em; }
-.content > section article { background-color: rgba(255, 255, 255, 0.7); padding: 20px; }
+.content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; }
 .content > section small { display: block; margin-bottom: 5px;}
-.content > section .Disqus { background-color: rgba(255, 255, 255, 0.7); padding: 20px; }
+.content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px;  }
 
 .content aside { float: left; width: 20%; padding-right: 0; }
 .content aside a { display: block; text-decoration: none; font-size: 0.85rem}
@@ -47,6 +43,6 @@ a:hover { color:#333;}
 @media (max-width: 768px) {
 
 	.content > section { width: 100%; }
-	.content aside { width: 100%; } 
+	.content aside { width: 100%; margin-top: 5px; } 
 }
 
