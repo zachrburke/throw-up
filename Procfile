@@ -1,1 +1,1 @@
-web: moonc .; moonc views/; moonc models; lapis server production
+web: sh build.cmd; cd bin; lapis server production

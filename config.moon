@@ -13,4 +13,3 @@ config 'production', ->
 
 	blogFilePath 'content/blog/'
 
--- test

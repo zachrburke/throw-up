@@ -25,7 +25,8 @@ header hgroup small { display: block; }
 
 header section { width: 10%; float: left; }
 header section li { text-decoration: none; list-style: none; line-height: 1.2; }
-header section ul { float: right; padding-right: 20px; }
+header section ul { float: right; padding-right: 20px; margin: 16px 0;}
+header section li img { width: 22px; height: 22px;}
 
 .content { max-width: 1024px; margin: auto; }
 
@@ -39,7 +40,7 @@ header section ul { float: right; padding-right: 20px; }
 .content aside a { display: block; text-decoration: none; font-size: 0.85rem}
 .content aside section { background-color: rgba(255, 255, 255, 0.7); padding: 20px; }
 
-a:link { color:#339;}    
+a:link { color:#339;}   
 a:hover { color:#333;}  
 .selected { background-color: #eee; }
 

@@ -31,7 +31,7 @@ class Layout extends Widget
 									i class: 'icon-github'
 							li ->
 								a href: 'http://ren.itch.io', target: '_blank', ->
-									small 'itch'
+									img src: '/content/images/itchio_icon.png'
 
 
 
@@ -39,4 +39,4 @@ class Layout extends Widget
 					@content_for "inner"
 
 				script src: '/content/js/highlight.pack.js'
-				script 'hljs.initHighlightingOnLoad();'
+				script 'hljs.initHighlightingOnLoad();' 
