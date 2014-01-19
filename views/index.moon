@@ -10,14 +10,15 @@ class Index extends Widget
 				
 				if @Post and @errors == nil
 					small 'posted sometime around ' .. @Post.PubDate 
-					@Render 'templates/share.html', { url: @URL, twitterText: @Title }
+					@Render 'share', { url: @URL, twitterText: @Title }
 					raw @PostBody
 				else
 					raw @errors
 
 			div class: 'Disqus', ->
 				unless @errors
-					@Render 'templates/disqus.html', { slug: @Post.Slug }
+					a class: 'moot', href: 'https://moot.it/i/throw-up/'..@Post.Slug..':S', ->
+						'Comments for this blog entry'
 
 		aside ->
 			section ->
@@ -33,15 +34,10 @@ class Index extends Widget
 					small post.PubDate
 
 			if @Environment != 'development'
-				@Render 'templates/google_analytics.html'
+				@Render 'google_analytics'
 
 
 	Render: (templateName, data) =>
-		status, error = pcall ->
-			io.input templateName
-			template = etlua.compile(io.read('*all'))
-			raw template data
-
-		
+		raw @app.templates[templateName](data)		
 
 

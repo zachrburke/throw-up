@@ -6,13 +6,15 @@ discount = require 'discount'
 _ = require 'underscore'
 PostList = require 'models.postList'
 config = require('lapis.config').get!
-
 util = require 'lapis.util'
-
 
 lapis.serve class extends lapis.Application
 
 	layout: require 'views.layout'
+
+	new: =>
+		super!
+		@templates = require 'templates'
 
 	[loopback: '/']: =>
 		redirect_to: PostList[1].Slug
@@ -28,7 +30,7 @@ lapis.serve class extends lapis.Application
 		@Title = @Post.Title
 		@PostBody = @app\GetPostBodyByName @Post.FileName
 		@Environment = config._name
-		@URL = @app\GetURL @req.parsed_url
+		@URL = @req.built_url
 
 		render: true
 
@@ -50,12 +52,6 @@ lapis.serve class extends lapis.Application
 		unless error then yield_error "BARF!<br>I haven't written that one yet"
 		yield_error error
 
-	GetURL: (parsed_url) => 
-		url = parsed_url.scheme..'://'..parsed_url.host
-		if parsed_url.port then url = url..':'..parsed_url.port
-		if parsed_url.path then url = url..parsed_url.path
-		if parsed_url.query then url = url..'?'..parsed_url.query
-		return url
 
 	
 

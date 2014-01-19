@@ -11,7 +11,14 @@ class Layout extends Widget
 				link rel: "stylesheet", href: '/content/css/styles.css'
 				link rel: "stylesheet", href: '/content/css/default.css'
 				link rel: "stylesheet", href: '/content/css/socialicious.css'
+				link rel: "stylesheet", href: '//cdn.moot.it/1/moot.css'
 				link rel: "icon", href: '/content/images/barf.ico'
+
+				script src: '//code.jquery.com/jquery-1.10.2.min.js'
+				script src: '//cdn.moot.it/1/moot.min.js'
+
+				meta ['http-equiv']: 'X-UA-Compatible', content: 'IE=edge,chrome=1'
+
 				title if @Title then @Title else 'throw up;'
 
 			body -> 

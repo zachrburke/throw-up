@@ -2,6 +2,10 @@ echo ''
 echo '====| Starting Build |==='
 
 echo ''
+echo 'Cleaning old build'
+rm -R bin/*
+
+echo ''
 echo 'Building Moonscript files into lua'
 moonc -t bin/ .
 
