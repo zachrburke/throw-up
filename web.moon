@@ -30,8 +30,6 @@ lapis.serve class extends lapis.Application
 		@Environment = config._name
 		@URL = @app\GetURL @req.parsed_url
 
-		ngx.log ngx.NOTICE, @URL
-
 		render: true
 
 	[console: '/debug/console']: console.make!
