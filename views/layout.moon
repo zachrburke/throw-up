@@ -38,5 +38,8 @@ class Layout extends Widget
 				section class: 'content', ->
 					@content_for "inner"
 
+
+				@content_for "javascript" 
+
 				-- script src: '/content/js/highlight.pack.js'
 				-- script 'hljs.initHighlightingOnLoad();' 

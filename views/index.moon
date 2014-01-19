@@ -10,6 +10,7 @@ class Index extends Widget
 				
 				if @Post and @errors == nil
 					small 'posted sometime around ' .. @Post.PubDate 
+					@Render 'templates/share.html', { url: @URL, twitterText: @Title }
 					raw @PostBody
 				else
 					raw @errors

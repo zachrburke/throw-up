@@ -7,6 +7,8 @@ _ = require 'underscore'
 PostList = require 'models.postList'
 config = require('lapis.config').get!
 
+util = require 'lapis.util'
+
 
 lapis.serve class extends lapis.Application
 
@@ -26,6 +28,9 @@ lapis.serve class extends lapis.Application
 		@Title = @Post.Title
 		@PostBody = @app\GetPostBodyByName @Post.FileName
 		@Environment = config._name
+		@URL = @app\GetURL @req.parsed_url
+
+		ngx.log ngx.NOTICE, @URL
 
 		render: true
 
@@ -46,6 +51,13 @@ lapis.serve class extends lapis.Application
 	ThrowUp: (error) =>
 		unless error then yield_error "BARF!<br>I haven't written that one yet"
 		yield_error error
+
+	GetURL: (parsed_url) => 
+		url = parsed_url.scheme..'://'..parsed_url.host
+		if parsed_url.port then url = url..':'..parsed_url.port
+		if parsed_url.path then url = url..parsed_url.path
+		if parsed_url.query then url = url..'?'..parsed_url.query
+		return url
 
 	
 
