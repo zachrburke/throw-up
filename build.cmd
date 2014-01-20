@@ -1,11 +1,11 @@
 echo ''
 echo '====| Starting Build |==='
 
-if [ -d 'bin' ]; then
-	echo ''
-	echo 'Cleaning old build'
-	rm -R bin/*
-fi
+# if [ -d 'bin' ]; then
+# 	echo ''
+# 	echo 'Cleaning old build'
+# 	rm -R bin/*
+# fi
 
 echo ''
 echo 'Building Moonscript files into lua'
