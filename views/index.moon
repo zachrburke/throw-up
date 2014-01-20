@@ -37,17 +37,17 @@ class Index extends Widget
 			if @Environment != 'development'
 				@Render 'google_analytics'
 
-		@content_for "javascript", ->
-			if @Post.Languages
-				script src: '/content/js/highlight.pack.js'
-				script -> 
-					raw "var languages = #{util.to_json(@Post.Languages)};\n"
-					raw [[
-					hljs.configure({
-						languages: languages
-					});
-					hljs.initHighlightingOnLoad();
-				]]
+		-- @content_for "javascript", ->
+		-- 	if @Post.Languages
+		-- 		script src: '/content/js/highlight.pack.js'
+		-- 		script -> 
+		-- 			raw "var languages = #{util.to_json(@Post.Languages)};\n"
+		-- 			raw [[
+		-- 			hljs.configure({
+		-- 				languages: languages
+		-- 			});
+		-- 			hljs.initHighlightingOnLoad();
+		-- 		]]
 
 
 	Render: (templateName, data) =>

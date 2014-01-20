@@ -1,5 +1,7 @@
 import Widget from require 'lapis.html'
 
+util = require 'lapis.util'
+
 class Layout extends Widget
 
 	content: =>
@@ -46,6 +48,17 @@ class Layout extends Widget
 					@content_for "inner"
 
 
-				@content_for "javascript" 
+				@content_for "javascript"
+
+				if @Post.Languages
+					script src: '/content/js/highlight.pack.js'
+					script -> 
+						raw "var languages = #{util.to_json(@Post.Languages)};\n"
+						raw [[
+						hljs.configure({
+							languages: languages
+						});
+						hljs.initHighlightingOnLoad();
+					]] 
 
 				
