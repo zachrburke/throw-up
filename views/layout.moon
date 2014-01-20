@@ -48,5 +48,4 @@ class Layout extends Widget
 
 				@content_for "javascript" 
 
-				-- script src: '/content/js/highlight.pack.js'
-				-- script 'hljs.initHighlightingOnLoad();' 
+				

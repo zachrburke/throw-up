@@ -1,6 +1,7 @@
 import Widget from require 'lapis.html'
 
 etlua = require 'etlua'
+util = require 'lapis.util'
 
 class Index extends Widget
 
@@ -35,6 +36,18 @@ class Index extends Widget
 
 			if @Environment != 'development'
 				@Render 'google_analytics'
+
+		@content_for "javascript", ->
+			if @Post.Languages
+				script src: '/content/js/highlight.pack.js'
+				script -> 
+					raw "var languages = #{util.to_json(@Post.Languages)};\n"
+					raw [[
+					hljs.configure({
+						languages: languages
+					});
+					hljs.initHighlightingOnLoad();
+				]]
 
 
 	Render: (templateName, data) =>
