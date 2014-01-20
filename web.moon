@@ -34,7 +34,7 @@ lapis.serve class extends lapis.Application
 
 		render: true
 
-	-- [console: '/debug/console']: console.make!
+	[console: '/debug/console']: console.make!
 
 	GetPostBodyByName: (name) =>
 		path = config.blogFilePath .. name 
