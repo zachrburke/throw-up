@@ -5,5 +5,5 @@ dependencies = {
 	"https://raw.github.com/leafo/etlua/master/etlua-dev-1.rockspec",
 	"lua-discount",
 	"moonscript",
-	"lapis"
+	"http://rocks.moonscript.org/manifests/leafo/lapis-0.0.10-1.rockspec"
 }
