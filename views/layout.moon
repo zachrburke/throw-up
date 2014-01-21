@@ -50,7 +50,7 @@ class Layout extends Widget
 
 				@content_for "javascript"
 
-				if @Post.Languages
+				if @Post and @Post.Languages
 					script src: '/content/js/highlight.pack.js'
 					script -> 
 						raw "var languages = #{util.to_json(@Post.Languages)};\n"
