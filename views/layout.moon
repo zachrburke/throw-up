@@ -5,7 +5,7 @@ util = require 'lapis.util'
 class Layout extends Widget
 
 	content: =>
-		html_5 ->
+		html_5 itemscope: true, itemtype: "http://schema.org/WebPage", ['xmlns:fb']: "https://www.facebook.com/2008/fbml", ->
 
 			head -> 
 				meta name: "viewport", content: 'width=device-width, initial-scale=1.0'
@@ -20,6 +20,7 @@ class Layout extends Widget
 				script src: '//cdn.moot.it/1/moot.min.js'
 
 				meta ['http-equiv']: 'X-UA-Compatible', content: 'IE=edge,chrome=1'
+				meta content: 'content/images/vomit_fountain.png', itemprop: 'image', property: 'og:image'
 
 				title if @Title then @Title else 'throw up;'
 
@@ -27,6 +28,7 @@ class Layout extends Widget
 				header ->
 					hgroup ->
 						div ->
+							img src: 'content/images/vomit_fountain.png'
 							small "var up = new Exception();"
 							h3  "throw up;"
 
