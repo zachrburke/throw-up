@@ -1,5 +1,3 @@
-#### Blogging With Lapis part 2, Implementation
-
 This has been exciting.  In my freetime for the past 5-6 days I have been working furiously on this blog.  I've decided that I need three posts to accurately sum up what has been an englightening project for me.  This post I'll write about the actual implementation of throw-up.
 
 Yes, you heard me correctly, throw-up.  I thought the name was so clever I bought the domain sometime in late 2012-early 2013.  I thought I would dedicate it to the don'ts of the programming world.  My own version of [the daily wtf](http://thedailywtf.com/). 

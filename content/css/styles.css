@@ -6,7 +6,7 @@ hgroup, .content > section, aside, header, header section {
 
 blockquote { font-style: italic; border-left: 5px solid #eee; }
 
-aside, header { border: 1px solid #ddd; }
+aside, header { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7);}
 
 body { background-color: rgb(245, 245, 245); margin: 0;}
 
@@ -28,15 +28,21 @@ header section li img { width: 22px; height: 22px; }
 
 .content { max-width: 1366px; margin: 0 auto 10px; }
 
-.content > section { float: left; width: 80%; padding-right: 5px;  }
+.content > section { float: left; width: 100%; }
 .content > section h2 { margin-bottom: 0.425em; }
-.content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; }
+.content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; border-top: none;}
 .content > section small { display: block; margin-bottom: 5px;}
-.content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px;  }
+.content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px; }
 
-.content aside { float: left; width: 20%; padding-right: 0; }
-.content aside a { display: block; text-decoration: none; font-size: 0.85rem}
-.content aside section { background-color: rgba(255, 255, 255, 0.7); padding: 20px; }
+.content aside { float: left; width: 100%; margin-top: 5px; }
+.content aside a { text-decoration: none; font-size: 0.85rem}
+.content aside small { display: block; }
+.content aside section { padding: 20px; }
+.content aside .headline { float: left; margin: 5px 0; width: 50%; min-width: 300px; }
+.content aside { margin-bottom: 15px; }
+
+.content .metadata { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; border-bottom: none; }
+.content .metadata h4 { display: inline; }
 
 .content .ShareIcons { float: right; }
 .content .ShareIcons a { text-decoration: none; }
@@ -45,10 +51,4 @@ header section li img { width: 22px; height: 22px; }
 a:link { color:#339;}   
 a:hover { color:#333;}  
 .selected { background-color: #eee; }
-
-@media (max-width: 768px) {
-
-	.content > section { width: 100%; padding-right: 0; }
-	.content aside { width: 100%; margin-top: 5px; } 
-}
 

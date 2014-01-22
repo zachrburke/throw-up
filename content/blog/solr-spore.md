@@ -1,5 +1,3 @@
-#### Solr in Lua/Moonscript using SPORE
-
 The other day I had an idea for a website that would basically be a CRUD application where the data store is a search engine.  I wondered how I would do this while still being able to write a web application using the Moonscript/Lapis stack.  
 
 For my search engine, I chose [Apache Solr](http://lucene.apache.org/solr/).  Namely because I have had a little experience with it already and I think it is a fascinating technology that I would like to learn more about.  

@@ -1,5 +1,3 @@
-#### Benefits of the article tag
-
 Christmas is coming up so I went ahead and got myself (and some family) a Kindle Fire HD 7" tablet.  While playing around with the Kindle, I thought I would pull throw-up on the Silk browser.  I noticed two things:
 
 * I was crazy to show the sidebar in portait mode on a 7" tablet.  The text gets way too tall.

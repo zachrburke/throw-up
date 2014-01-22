@@ -1,5 +1,3 @@
-####Cleaning up, moonc -t and Guard
-
 Today I was bored so I decided to do some cleaning up on throw-up.  A few things have bothered me since I started coding with the lapis/openresty stack.  First is that nginx likes to create several temp directories at the location I run, which is where my code is.  That generates about 4 directories of noise in my code base.  The other thing is that I would compile my moonscript files right where they were, so anytime I glance at my codebase I would see two versions of every .moon file which made a blog that is almost no code seem like a big project.
 
 Using moonc -t, I was able to kill two birds with one stone.  the -t flag tells moonc to place compiled lua files in directory of choice.  I decided to create a bin directory that rests at the root level of my code and put the compiled lua files in there.  I wrote a small shellscript to copy over the content, mime types and nginx.conf file as well so I could run the lapis server in the bin directory instead of the root directory of my code.  Now those temp directories only exist in the bin directory where I don't have to look at them to navigate code.

@@ -1,5 +1,3 @@
-#### Blogging with Lapis, Building Openresty
-
 A few weeks ago I read [this](http://kijanawoodard.com/building-a-blog-engine) blog post by Kijana Woodard, which inspired me to create my own blog.  This gives me an opportunity to touch on a number of technologies I've been meaning to checkout.  Namely, [Openresty](http://openresty.org) and [Lapis](http://leafo.net/lapis), a web framework that leverages [moonscript](http://moonscript.org).
 
 I am going to break this out over two posts since I wanted cover the installation of openresty seperate from the rest of the blog implementation.  It should be noted that I did this development on a Mac machine, and I am not sure how I would setup openresty on a windows box just yet.

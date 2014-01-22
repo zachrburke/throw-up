@@ -1,5 +1,3 @@
-#### Blogging With Lapis part 3, Deploying to Heroku
-
 Sometimes, I insist on being different, and sometimes that can come back to bite me.  Writing the code for throw-up was a fun educational journey into front-end design and the lua scripting language.  Deployment on the other hand, was educational in a much more painful way.  
 
 I decided to go with heroku since a lot of the work for that had been done for me.  While Heroku doesn't natively support lua, there is the handy dandy [lua build kit](https://github.com/leafo/heroku-buildpack-lua).  To give Heroku openresty support, there is [this luarock](https://github.com/leafo/heroku-openresty) which makes me wonder if I can't just install openresty using luarocks on my own machine.  

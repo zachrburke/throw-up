@@ -5,7 +5,7 @@ util = require 'lapis.util'
 class Layout extends Widget
 
 	content: =>
-		html_5 itemscope: true, itemtype: "http://schema.org/WebPage", ['xmlns:fb']: "https://www.facebook.com/2008/fbml", ->
+		html lang: 'en', itemscope: true, itemtype: "http://schema.org/WebPage", ['xmlns:fb']: "https://www.facebook.com/2008/fbml", ->
 
 			head -> 
 				meta name: "viewport", content: 'width=device-width, initial-scale=1.0'
@@ -52,15 +52,6 @@ class Layout extends Widget
 
 				@content_for "javascript"
 
-				if @Post and @Post.Languages
-					script src: '/content/js/highlight.pack.js'
-					script -> 
-						raw "var languages = #{util.to_json(@Post.Languages)};\n"
-						raw [[
-						hljs.configure({
-							languages: languages
-						});
-						hljs.initHighlightingOnLoad();
-					]] 
+		
 
 				
