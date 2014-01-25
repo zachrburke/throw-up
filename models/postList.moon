@@ -1,6 +1,13 @@
 
 return {
 	{
+		Title: "Makin' changes, switchin' to Moot"
+		Slug: "some-changes"
+		FileName: "some-changes.md"
+		PubDate: "January 25, 2014"
+		Languages: { 'coffeescript', 'js' }
+	}
+	{
 		Title: "Cleaning up, moonc -t and Guard"
 		Slug: "cleaning-up"
 		FileName: "cleaner-workflow.md"
