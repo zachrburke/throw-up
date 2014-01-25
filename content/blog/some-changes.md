@@ -2,11 +2,11 @@ For the past few weeks I have been making changes to the look and feel of throw-
 
 * Upgrading HighlightJS
 * Squashing the side articles bar
-* Switching out [Disqus](lkhlkh) with [Moot](http://moot.it) for handling comments
+* Switching out [Disqus](http://disqus.com/) with [Moot](http://moot.it) for handling comments
 
 #####HighlightJS
 
-In my last post about Guard, I mentioned that I turned off [HighlightJS](lkhlkh) because I was having issues getting it to detect the right language for a code block, and because I had a ruby snippet to show but didn't initially include ruby with my packed highlightjs file.  At the time I decided it was easier to just drop it instead of rebuild it with the ruby language included.
+In my last post about Guard, I mentioned that I turned off [HighlightJS](http://highlightjs.org/) because I was having issues getting it to detect the right language for a code block, and because I had a ruby snippet to show but didn't initially include ruby with my packed highlightjs file.  At the time I decided it was easier to just drop it instead of rebuild it with the ruby language included.
 
 The decision to pick a small set of languages wasn't to reduce page weight, although that is a qualifying factor.  It was to reduce the probability that the wrong language would be detected on a page where I refer to code.  With their 0.80 release, they fix this problem by allowing you to specify what languages highlightjs should look for before having it auto highlight anything.  Now, in my post list I specify the programming languages to be expected in a blog post, like so:
 
