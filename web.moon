@@ -7,6 +7,10 @@ _ = require 'underscore'
 PostList = require 'models.postList'
 config = require('lapis.config').get!
 util = require 'lapis.util'
+require("lapis.features.etlua")!
+require 'views.about'
+
+
 
 lapis.serve class extends lapis.Application
 
@@ -15,6 +19,7 @@ lapis.serve class extends lapis.Application
 	new: =>
 		super!
 		@templates = require 'templates'
+		-- @enable 'etlua'
 
 	[loopback: '/']: =>
 		redirect_to: PostList[1].Slug
@@ -35,6 +40,9 @@ lapis.serve class extends lapis.Application
 		render: true
 
 	[console: '/debug/console']: console.make!
+
+	[about: '/me/about']: =>
+		return 'hello'
 
 	GetPostBodyByName: (name) =>
 		path = config.blogFilePath .. name 

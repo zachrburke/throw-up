@@ -12,6 +12,9 @@ status, error = pcall ->
 	io.input 'templates/share.html'
 	templates.share = etlua.compile(io.read('*all'))
 
+	io.input 'templates/about.html'
+	templates.about = etlua.compile(io.read('*all'))
+
 
 if error
 	ngx.log ngx.NOTICE, error
