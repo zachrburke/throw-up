@@ -1,0 +1,42 @@
+<section>
+	<article>
+		<section class='GameTitleLeft'>
+			<img src='/content/images/vomit_fountain.png' />
+			<div>
+				<h6>
+					Treat Fighter:  Triple Treat
+				</h6>
+				<span>
+					A halloween themed beat'em up made for a nine day game jam (details found <a href="http://itch.io/jam/saltw">here</a>)
+				</span>
+				<span>
+					Built in HTML5/Javascript using <a href="http://impactjs.com">ImpactJS</a>
+				</span>
+				<div>
+					<a href="http://ren.itch.io/treat-fighter-triple-treat" target="_blank" class="itchio-play">
+						Play on <strong>itch.io</strong>
+					</a>
+				</div>
+				
+			</div>
+		</section>
+		<section class='ImageReel'>
+			<div>
+				<img src='/content/images/vomit_fountain.png' />
+				<img src='/content/images/vomit_fountain.png' />
+				<img src='/content/images/vomit_fountain.png' />
+			</div>
+		</section>
+		<section class='GameTitleRight'>
+			<img src='/content/images/vomit_fountain.png' />
+			<div>
+				<h6>
+					Treat Fighter:  Triple Treat
+				</h6>
+				<p>
+					text text text
+				</p>
+			</div>
+		</section>
+	</article>
+</section>

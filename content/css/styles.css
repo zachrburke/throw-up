@@ -52,3 +52,30 @@ a:link { color:#339;}
 a:hover { color:#333;}  
 .selected { background-color: #eee; }
 
+section.GameTitleLeft { min-height: 380px; clear: both; }
+section.GameTitleLeft > img { width: 256px; float: right; margin-left: 30px; }
+section.GameTitleLeft span { display: block; margin-bottom: 10px; }
+
+section.GameTitleRight { min-height: 380px; clear: both; padding-top: 20px;}
+section.GameTitleRight img { width: 256px; float: left; }
+section.GameTitleRight div { }
+
+section.ImageReel div { position: relative; float: left; left: 50%; }
+section.ImageReel img { position: relative; float: left; left: -50%; margin: 0 10px; width: 256px; }
+
+.itchio-play {
+	font-family: Lato, sans-serif;
+	display: inline-block;
+	background: #FA5C5C;
+	color: white;
+	text-decoration: none;
+	padding: 0 10px;
+	font-size: 14px;
+	text-shadow: 1px 1px 2px #b70606;
+	border-radius: 1px;
+	cursor: pointer;
+	border: 0;
+	line-height: 35px;
+	height: 35px;
+	border: 0;
+}

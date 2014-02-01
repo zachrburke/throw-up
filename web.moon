@@ -1,48 +1,17 @@
 import capture_errors, yield_error from require 'lapis.application'
 
 lapis = require 'lapis'
-console = require 'lapis.console'
 discount = require 'discount'
-_ = require 'underscore'
-PostList = require 'models.postList'
 config = require('lapis.config').get!
-util = require 'lapis.util'
-require("lapis.features.etlua")!
-require 'views.about'
-
-
+require("lapis.features.etlua")
 
 lapis.serve class extends lapis.Application
-
-	layout: require 'views.layout'
+	@include 'applications.home'
+	@include 'applications.me'
 
 	new: =>
 		super!
 		@templates = require 'templates'
-		-- @enable 'etlua'
-
-	[loopback: '/']: =>
-		redirect_to: PostList[1].Slug
-
-	[index: "/:slug"]: capture_errors =>
-
-		@PostList = PostList
-		@Post = _.find PostList, (post) ->
-			return post.Slug == @params.slug
-
-		unless @Post then @app\ThrowUp!
-		
-		@Title = @Post.Title
-		@PostBody = @app\GetPostBodyByName @Post.FileName
-		@Environment = config._name
-		@URL = @req.built_url
-
-		render: true
-
-	[console: '/debug/console']: console.make!
-
-	[about: '/me/about']: =>
-		return 'hello'
 
 	GetPostBodyByName: (name) =>
 		path = config.blogFilePath .. name 
@@ -59,8 +28,4 @@ lapis.serve class extends lapis.Application
 	ThrowUp: (error) =>
 		unless error then yield_error "BARF!<br>I haven't written that one yet"
 		yield_error error
-
-
-	
-
 

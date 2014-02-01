@@ -1,11 +1,11 @@
 echo ''
 echo '====| Starting Build |==='
 
-# if [ -d 'bin' ]; then
-# 	echo ''
-# 	echo 'Cleaning old build'
-# 	rm -R bin/*
-# fi
+if [ -d 'bin' ]; then
+	echo ''
+	echo 'Cleaning old build'
+	rm -R bin/*
+fi
 
 echo ''
 echo 'Building Moonscript files into lua'
@@ -29,3 +29,7 @@ cp -R content bin/
 echo ''
 echo 'Copying templates directory'
 cp -R templates bin/
+
+echo ''
+echo 'Copying etlua files'
+find views/ -name \*.etlua -exec rsync -R {} bin/ \;
