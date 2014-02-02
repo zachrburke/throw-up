@@ -2,7 +2,7 @@
 	<article>
 		<section class='GameTitleLeft'>
 			<div>
-				<img src='/content/images/screenshots/tf_title.png' />
+				<img src='/content/images/tf_title.png' />
 				<h6>
 					Treat Fighter:  Triple Treat
 				</h6>
@@ -20,16 +20,16 @@
 			</div>
 			<section class='ImageReel'>
 				<div>
-					<img src='/content/images/screenshots/tf_scores.png' />
-					<img src='/content/images/screenshots/tf_rampage.png' />
-					<img src='/content/images/screenshots/tf_screen1.png' />
+					<img src='/content/images/tf_scores.png' />
+					<img src='/content/images/tf_rampage.png' />
+					<img src='/content/images/tf_screen1.png' />
 				</div>
 			</section>
 		</section>
 
 		<section class='GameTitleRight'>
 			<div>
-				<img src='/content/images/screenshots/ie_screen1.png' />
+				<img src='/content/images/ie_screen1.png' />
 				<h6>
 					Impact Explorer
 				</h6>
@@ -47,16 +47,16 @@
 			</div>
 			<section class='ImageReel'>
 				<div>
-					<img src='/content/images/screenshots/ie_screen2.png' />
-					<img src='/content/images/screenshots/ie_screen3.png' />
-					<img src='/content/images/screenshots/ie_screen4.png' />
+					<img src='/content/images/ie_screen2.png' />
+					<img src='/content/images/ie_screen3.png' />
+					<img src='/content/images/ie_screen4.png' />
 				</div>
 			</section>
 		</section>
 		
 		<section class='GameTitleLeft'>
 			<div>
-				<img src='/content/images/screenshots/lk_screen1.png' />
+				<img src='/content/images/lk_screen1.png' />
 				<h6>
 					Lil' King's Adventures
 				</h6>
@@ -74,8 +74,8 @@
 			</div>
 			<section class='ImageReel'>
 				<div>
-					<img src='/content/images/screenshots/lk_screen2.png' />
-					<img src='/content/images/screenshots/lk_screen3.png' />
+					<img src='/content/images/lk_screen2.png' />
+					<img src='/content/images/lk_screen3.png' />
 				</div>
 			</section>
 		</section>
