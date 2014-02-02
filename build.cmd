@@ -32,8 +32,11 @@ cp -R templates bin/
 
 echo ''
 echo 'Copying etlua files'
-if [[ "$OSTYPE" == "darwin"*]]; then
-	find views/ -name \*.etlua -exec rsync -R {} bin/ \;
-elif [[ "$OSTYPE" == "linix-gnu" ]]; then
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	echo 'Linux detected, using cp --parents'
 	find views/ -name \*.etlua -exec cp --parents {} bin/ \;
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	echo 'Mac detected, using rsync'
+	find views/ -name \*.etlua -exec rsync -R {} bin/ \;
 fi
