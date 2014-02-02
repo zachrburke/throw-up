@@ -1,7 +1,28 @@
 <section>
-	<article>
+	<article class="About">
 		<h5>
-			Under construction
+			About me
 		</h5>
+		<span>
+			Currently, I am a .NET web developer during the day and I moonlight on my own personal projects, which are usually games.
+		</span>
+		<span>
+			I usually upload work I do on my own to <a href="http://ren.itch.io">my itch.io account</a>.  I've also done work under a company alias of lil king studios, which has <a href="http://lilkingstudios.itch.io">it's own itch.io page</a>
+		</span>
+		<span>
+			Of course, you can also look at my <a href="/me/portfolio">portfolio</a> page to see the games I have worked on.
+		</span>
+		<span>
+			If you want to reach me for any reason at all, my contact information is below.
+		</span>
+		<h5>
+			Contact Info
+		</h5>
+		<span>
+			Email: <a href="mailto:rbur417@gmail.com">rbur417@gmail.com</a>
+		</span>
+		<span>
+			Twitter: <a href="http://twitter.com/zach_no_beard">@zach_no_beard</a>
+		</span>
 	</article>
 </section>

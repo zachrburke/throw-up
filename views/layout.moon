@@ -28,9 +28,13 @@ class Layout extends Widget
 				header ->
 					hgroup ->
 						div ->
-							img src: '/content/images/vomit_fountain.png'
+							a href: '/', ->
+								img src: '/content/images/vomit_fountain.png'
 							small "var up = new Exception();"
 							h3  "throw up;"
+							nav ->
+								a href: '/', 'Home'
+								a href: '/me/about', 'About'
 
 					section ->
 						 ul ->
@@ -48,7 +52,6 @@ class Layout extends Widget
 
 				section class: 'content', ->
 					@content_for "inner"
-
 
 				@content_for "javascript"
 

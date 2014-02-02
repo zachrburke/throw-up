@@ -1,8 +1,8 @@
 <section>
 	<article>
 		<section class='GameTitleLeft'>
-			<img src='/content/images/vomit_fountain.png' />
 			<div>
+				<img src='/content/images/screenshots/tf_title.png' />
 				<h6>
 					Treat Fighter:  Triple Treat
 				</h6>
@@ -17,26 +17,68 @@
 						Play on <strong>itch.io</strong>
 					</a>
 				</div>
-				
 			</div>
+			<section class='ImageReel'>
+				<div>
+					<img src='/content/images/screenshots/tf_scores.png' />
+					<img src='/content/images/screenshots/tf_rampage.png' />
+					<img src='/content/images/screenshots/tf_screen1.png' />
+				</div>
+			</section>
 		</section>
-		<section class='ImageReel'>
-			<div>
-				<img src='/content/images/vomit_fountain.png' />
-				<img src='/content/images/vomit_fountain.png' />
-				<img src='/content/images/vomit_fountain.png' />
-			</div>
-		</section>
+
 		<section class='GameTitleRight'>
-			<img src='/content/images/vomit_fountain.png' />
 			<div>
+				<img src='/content/images/screenshots/ie_screen1.png' />
 				<h6>
-					Treat Fighter:  Triple Treat
+					Impact Explorer
 				</h6>
-				<p>
-					text text text
-				</p>
+				<span>
+					A tech demo demonstrating a 2D platformer concept where you steal enemy abilities to overcome obstacles.  
+				</span>
+				<span>
+					Built in HTML5/Javascript using <a href="http://impactjs.com">ImpactJS</a>
+				</span>
+				<div>
+					<a href="http://lilkingstudios.itch.io/impact-explorer" target="_blank" class="itchio-play">
+						Play on <strong>itch.io</strong>
+					</a>
+				</div>
 			</div>
+			<section class='ImageReel'>
+				<div>
+					<img src='/content/images/screenshots/ie_screen2.png' />
+					<img src='/content/images/screenshots/ie_screen3.png' />
+					<img src='/content/images/screenshots/ie_screen4.png' />
+				</div>
+			</section>
 		</section>
+		
+		<section class='GameTitleLeft'>
+			<div>
+				<img src='/content/images/screenshots/lk_screen1.png' />
+				<h6>
+					Lil' King's Adventures
+				</h6>
+				<span>
+					Small tech demo demonstrating an imcomplete level editor for a real time strategy game that involves guiding a toy viking out of harms way.
+				</span>
+				<span>
+					Built using Unity3d and <a href="https://www.assetstore.unity3d.com/#/content/32">EZ GUI</a>
+				</span>
+				<div>
+					<a href="http://lilkingstudios.itch.io/lil-king-adventures" target="_blank" class="itchio-play">
+						Play on <strong>itch.io</strong>
+					</a>
+				</div>
+			</div>
+			<section class='ImageReel'>
+				<div>
+					<img src='/content/images/screenshots/lk_screen2.png' />
+					<img src='/content/images/screenshots/lk_screen3.png' />
+				</div>
+			</section>
+		</section>
+
 	</article>
 </section>
