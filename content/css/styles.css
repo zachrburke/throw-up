@@ -72,7 +72,7 @@ section.GameTitleRight span { display: block; margin-bottom: 10px; }
 section.GameTitleRight > div { min-height: 250px; border: 1px solid #bbb; padding: 10px; }
 
 section.ImageReel { clear:both; margin-top: 10px; min-height: 290px; }
-section.ImageReel img { width: 33.3%; min-width: 312px; height: 276px; float: left; border: 1px solid #999; }
+section.ImageReel img { width: 33.3%; min-width: 212px; height: 256px; float: left; border: 1px solid #999; }
 
 @media(max-width: 480px) {
 	section.GameTitleLeft > div img { width: 100%; }
