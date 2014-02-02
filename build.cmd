@@ -34,5 +34,6 @@ echo ''
 echo 'Copying etlua files'
 if [[ "$OSTYPE" == "darwin"*]]; then
 	find views/ -name \*.etlua -exec rsync -R {} bin/ \;
-if [[ "$OSTYPE" == "linix-gnu" ]]; then
+elif [[ "$OSTYPE" == "linix-gnu" ]]; then
 	find views/ -name \*.etlua -exec cp --parents {} bin/ \;
+fi
