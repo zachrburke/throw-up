@@ -64,7 +64,7 @@
 					Small tech demo demonstrating an imcomplete level editor for a real time strategy game that involves guiding a toy viking out of harms way.
 				</span>
 				<span>
-					Built using Unity3d and <a href="https://www.assetstore.unity3d.com/#/content/32">EZ GUI</a>
+					Built using Unity3d and <a href="http://www.tasharen.com/?page_id=140">NGUI</a>
 				</span>
 				<div>
 					<a href="http://lilkingstudios.itch.io/lil-king-adventures" target="_blank" class="itchio-play">
