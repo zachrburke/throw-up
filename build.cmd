@@ -31,6 +31,10 @@ echo 'Copying templates directory'
 cp -R templates bin/
 
 echo ''
+echo 'Copying sitemap.xml'
+cp sitemap.xml bin/sitemap.xml
+
+echo ''
 echo 'Copying etlua files'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
