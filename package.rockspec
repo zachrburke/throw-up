@@ -6,4 +6,5 @@ dependencies = {
 	"https://raw.github.com/leafo/etlua/master/etlua-dev-1.rockspec",
 	"lua-discount",
 	"moonscript",
+	"loadkit"
 }
