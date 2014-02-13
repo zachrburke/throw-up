@@ -14,6 +14,7 @@ class Layout extends Widget
 				link rel: "stylesheet", href: '/content/css/default.css'
 				link rel: "stylesheet", href: '/content/css/socialicious.css'
 				link rel: "stylesheet", href: '//cdn.moot.it/1/moot.css'
+				link rel: "stylesheet", href: 'http://fonts.googleapis.com/css?family=Lato'
 				link rel: "icon", href: '/content/images/barf.ico'
 
 				script src: '//code.jquery.com/jquery-1.10.2.min.js'
