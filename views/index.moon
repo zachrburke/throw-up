@@ -40,9 +40,6 @@ class Index extends Widget
 							text post.Title
 						small post.PubDate
 
-			if @Environment != 'development'
-				@Render 'google_analytics'
-
 		@content_for "javascript", ->
 			if @Post.Languages
 				script src: '/content/js/highlight.pack.js'

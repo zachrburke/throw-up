@@ -1,6 +1,7 @@
 import Widget from require 'lapis.html'
 
 util = require 'lapis.util'
+config = require 'lapis.config'
 
 class Layout extends Widget
 
@@ -54,7 +55,12 @@ class Layout extends Widget
 				section class: 'content', ->
 					@content_for "inner"
 
+				if config._name != 'development' then @Render 'google_analytics'
 				@content_for "javascript"
+
+
+	Render: (templateName, data) =>
+		raw @app.templates[templateName](data)	
 
 		
 
