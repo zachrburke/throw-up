@@ -1,7 +1,7 @@
 import Widget from require 'lapis.html'
 
 util = require 'lapis.util'
-config = require 'lapis.config'
+config = require('lapis.config').get!
 
 class Layout extends Widget
 
