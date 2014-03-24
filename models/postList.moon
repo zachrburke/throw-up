@@ -1,6 +1,12 @@
 
 return {
 	{
+		Title: "Why aren't there more ways to represent data?"
+		Slug: "data-representation"
+		FileName: "data-representation.md"
+		PubDate: "March 23, 2014"
+	}
+	{
 		Title: "Makin' changes, switchin' to Moot"
 		Slug: "some-changes"
 		FileName: "some-changes.md"

@@ -57,6 +57,8 @@ header section li i { font-size: 1.35rem; }
 
 .selected { background-color: #eee; }
 
+footer { clear: both; max-width: 1366px; margin: 0 auto 10px; padding-left: 20px; }
+
 article.About span { display: block; margin-bottom: 15px; }
 article.About h5 { border-bottom: 1px solid #bbb; padding-bottom: 5px; }
 

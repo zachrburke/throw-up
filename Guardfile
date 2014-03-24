@@ -10,4 +10,4 @@ guard 'livereload' do
 	watch(%r{bin/models/.+})
 end
 
-watch(%r{.+}) { `sh build.cmd` }
+watch(%r{.+}) { `bash build.cmd` }

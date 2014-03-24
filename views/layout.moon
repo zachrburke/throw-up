@@ -55,6 +55,11 @@ class Layout extends Widget
 				section class: 'content', ->
 					@content_for "inner"
 
+				footer ->
+					small ->
+						raw 'powered by '
+						a href: 'http://leafo.net/lapis/', 'lapis'
+
 				if config._name != 'development' then @Render 'google_analytics'
 				@content_for "javascript"
 
