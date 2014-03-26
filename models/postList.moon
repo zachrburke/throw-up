@@ -1,6 +1,12 @@
 
 return {
 	{
+		Title: "Writer's block is a thing"
+		Slug: "writers-block"
+		FileName: "writers-block.md"
+		PubDate: "March 25, 2014"
+	}
+	{
 		Title: "Why aren't there more ways to represent data?"
 		Slug: "data-representation"
 		FileName: "data-representation.md"
