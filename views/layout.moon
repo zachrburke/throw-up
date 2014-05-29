@@ -1,6 +1,7 @@
 import Widget from require 'lapis.html'
 
 util = require 'lapis.util'
+config = require('lapis.config').get!
 
 class Layout extends Widget
 
@@ -14,6 +15,7 @@ class Layout extends Widget
 				link rel: "stylesheet", href: '/content/css/default.css'
 				link rel: "stylesheet", href: '/content/css/socialicious.css'
 				link rel: "stylesheet", href: '//cdn.moot.it/1/moot.css'
+				link rel: "stylesheet", href: 'http://fonts.googleapis.com/css?family=Lato'
 				link rel: "icon", href: '/content/images/barf.ico'
 
 				script src: '//code.jquery.com/jquery-1.10.2.min.js'
@@ -28,9 +30,13 @@ class Layout extends Widget
 				header ->
 					hgroup ->
 						div ->
-							img src: '/content/images/vomit_fountain.png'
+							a href: '/', ->
+								img src: '/content/images/vomit_fountain.png'
 							small "var up = new Exception();"
 							h3  "throw up;"
+							nav ->
+								a href: '/', 'Home'
+								a href: '/me/about', 'About'
 
 					section ->
 						 ul ->
@@ -49,8 +55,17 @@ class Layout extends Widget
 				section class: 'content', ->
 					@content_for "inner"
 
+				footer ->
+					small ->
+						raw 'powered by '
+						a href: 'http://leafo.net/lapis/', 'lapis'
 
+				if config._name != 'development' then @Render 'google_analytics'
 				@content_for "javascript"
+
+
+	Render: (templateName, data) =>
+		raw @app.templates[templateName](data)	
 
 		
 

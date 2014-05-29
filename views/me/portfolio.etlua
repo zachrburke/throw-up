@@ -1,8 +1,8 @@
 <section>
 	<article>
 		<section class='GameTitleLeft'>
-			<img src='/content/images/vomit_fountain.png' />
 			<div>
+				<img src='http://i.imgur.com/JpVwZGG.png' />
 				<h6>
 					Treat Fighter:  Triple Treat
 				</h6>
@@ -17,26 +17,69 @@
 						Play on <strong>itch.io</strong>
 					</a>
 				</div>
-				
 			</div>
+			<section class='ImageReel'>
+				<div>
+					<img src='http://i.imgur.com/rMe4cjY.png' />
+					<img src='http://i.imgur.com/pFYpL66.png' />
+					<img src='http://i.imgur.com/7dQhwUg.png' />
+				</div>
+			</section>
 		</section>
-		<section class='ImageReel'>
-			<div>
-				<img src='/content/images/vomit_fountain.png' />
-				<img src='/content/images/vomit_fountain.png' />
-				<img src='/content/images/vomit_fountain.png' />
-			</div>
-		</section>
+
 		<section class='GameTitleRight'>
-			<img src='/content/images/vomit_fountain.png' />
 			<div>
+				<img src='http://i.imgur.com/gZWjowR.png' />
 				<h6>
-					Treat Fighter:  Triple Treat
+					Impact Explorer
 				</h6>
-				<p>
-					text text text
-				</p>
+				<span>
+					A tech demo demonstrating a 2D platformer concept where you steal enemy abilities to overcome obstacles.  
+				</span>
+				<span>
+					Built in HTML5/Javascript using <a href="http://impactjs.com">ImpactJS</a>
+				</span>
+				<div>
+					<a href="http://lilkingstudios.itch.io/impact-explorer" target="_blank" class="itchio-play">
+						Play on <strong>itch.io</strong>
+					</a>
+				</div>
 			</div>
+			<section class='ImageReel'>
+				<div>
+					<img src='http://i.imgur.com/m6TfwyS.png' />
+					<img src='http://i.imgur.com/zGPaDFw.png' />
+					<img src='http://i.imgur.com/IVb03tU.png' />
+				</div>
+			</section>
 		</section>
+		
+		<section class='GameTitleLeft'>
+			<div>
+				<img src='http://i.imgur.com/zB9a7KV.png' />
+				<h6>
+					Lil' King's Adventures
+				</h6>
+				<span>
+					Small tech demo demonstrating an imcomplete level editor for a real time strategy game that involves guiding a toy viking out of harms way.
+				</span>
+				<span>
+					Built using Unity3d and <a href="http://www.tasharen.com/?page_id=140">NGUI</a>
+				</span>
+				<div>
+					<a href="http://lilkingstudios.itch.io/lil-king-adventures" target="_blank" class="itchio-play">
+						Play on <strong>itch.io</strong>
+					</a>
+				</div>
+			</div>
+			<section class='ImageReel'>
+				<div>
+					<img src='http://i.imgur.com/ORZfTa6.png' />
+					<img src='http://i.imgur.com/qKQlSBv.png' />
+				</div>
+			</section>
+		</section>
+
 	</article>
 </section>
+

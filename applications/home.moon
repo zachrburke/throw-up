@@ -21,7 +21,6 @@ class HomeApplication extends lapis.Application
 		
 		@Title = @Post.Title
 		@PostBody = @app\GetPostBodyByName @Post.FileName
-		@Environment = config._name
 		@URL = @req.built_url
 
 		render: true, layout: 'layout'

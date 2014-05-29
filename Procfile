@@ -1,1 +1,1 @@
-web: sh build.cmd; cd bin; lapis server production
+web: bash build.cmd; cd bin; lapis server production

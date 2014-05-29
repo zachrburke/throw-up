@@ -1,4 +1,4 @@
-hgroup, .content > section, aside, header, header section {
+hgroup, .content > section, aside, header, header section, section.ImageReel img {
 	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -12,24 +12,31 @@ body { background-color: rgb(245, 245, 245); margin: 0;}
 
 pre code { word-wrap: normal; overflow: scroll; display: block; border: 2px solid #CFCFCF;}
 
-header { margin: 0 auto .2em; max-width: 1366px; height: 100px; background-color: rgba(255, 255, 255, 0.7);}
+a:link { color:#339;}   
+a:hover { color:#333;}  
+
+header { margin: 0 auto .2em; max-width: 1366px; height: 135px; background-color: rgba(255, 255, 255, 0.7);}
 
 header hgroup { width: 90%; float: left; }
 header hgroup h3 { margin-bottom: 0; }
 header hgroup div {  padding: 20px; }
 header hgroup small { display: block; }
+header hgroup nav { margin-top: 10px; }
+header hgroup nav a { text-decoration: none; color: black; margin-right: 20px; border-bottom: 2px solid black;}
+header hgroup nav a:hover { color: #77B;}
 header hgroup div img { float: left; border-radius: 37px; border: 1px solid #999;
-margin-right: 15px; opacity: 0.4; height: 64px; width: 64px; }
+margin-right: 15px; margin-top: 15px; opacity: 0.4; height: 64px; width: 64px; }
 
 header section { width: 10%; float: left; }
-header section li { text-decoration: none; list-style: none; line-height: 1.2; }
+header section li { text-decoration: none; list-style: none; line-height: 1.3; }
 header section ul { float: right; padding-right: 20px; margin: 16px 0;}
-header section li img { width: 22px; height: 22px; }
+header section li img { width: 28px; height: 28px; }
+header section li i { font-size: 1.35rem; }
 
 .content { max-width: 1366px; margin: 0 auto 10px; }
 
 .content > section { float: left; width: 100%; }
-.content > section h2 { margin-bottom: 0.425em; }
+.content > section h2 { margin-bottom: 0.425em; border-bottom: 1px solid #bbb; }
 .content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; border-top: none;}
 .content > section small { display: block; margin-bottom: 5px;}
 .content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px; }
@@ -48,20 +55,35 @@ header section li img { width: 22px; height: 22px; }
 .content .ShareIcons a { text-decoration: none; }
 .content .ShareIcons i { margin-left: 2px; font-size: 1.2rem; }
 
-a:link { color:#339;}   
-a:hover { color:#333;}  
 .selected { background-color: #eee; }
 
-section.GameTitleLeft { min-height: 380px; clear: both; }
-section.GameTitleLeft > img { width: 256px; float: right; margin-left: 30px; }
+footer { clear: both; max-width: 1366px; margin: 0 auto 10px; padding-left: 20px; }
+
+article.About span { display: block; margin-bottom: 15px; }
+article.About h5 { border-bottom: 1px solid #bbb; padding-bottom: 5px; }
+
+section.GameTitleLeft { clear: both; padding-top: 20px; }
+section.GameTitleLeft:first-child { padding-top: 0; }
+section.GameTitleLeft > div img { width: 312px; float: right; margin-left: 30px; }
 section.GameTitleLeft span { display: block; margin-bottom: 10px; }
+section.GameTitleLeft > div { min-height: 250px; padding: 10px; border: 1px solid #bbb;}
 
-section.GameTitleRight { min-height: 380px; clear: both; padding-top: 20px;}
-section.GameTitleRight img { width: 256px; float: left; }
-section.GameTitleRight div { }
+section.GameTitleRight { clear: both; padding-top: 20px; }
+section.GameTitleRight > div img { width: 312px; float: left; margin-right: 30px;}
+section.GameTitleRight span { display: block; margin-bottom: 10px; }
+section.GameTitleRight > div { min-height: 250px; border: 1px solid #bbb; padding: 10px; }
 
-section.ImageReel div { position: relative; float: left; left: 50%; }
-section.ImageReel img { position: relative; float: left; left: -50%; margin: 0 10px; width: 256px; }
+section.ImageReel { clear:both; margin-top: 10px; min-height: 290px; }
+section.ImageReel img { width: 33.3%; min-width: 212px; height: 256px; float: left; border: 1px solid #999; }
+
+@media(max-width: 480px) {
+	section.GameTitleLeft > div img { width: 100%; }
+	section.GameTitleRight > div img { width: 100%; }
+	section.GameTitleLeft > div h6 { clear: both; padding-top: 10px; }
+	section.GameTitleRight > div h6 { clear: both; padding-top: 10px; }
+	section.ImageReel img { width: 100%; }
+	section.ImageReel { min-height: 700px; }
+}
 
 .itchio-play {
 	font-family: Lato, sans-serif;
