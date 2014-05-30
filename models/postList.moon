@@ -1,6 +1,13 @@
 
 return {
 	{
+		Title: "Embedding lua in .NET"
+		Slug: "lua-dot-net"
+		FileName: "lua-dot-net.md"
+		PubDate: "May 30, 2014"
+		Languages: { 'cs', 'lua' }
+	}
+	{
 		Title: "Writer's block is a thing"
 		Slug: "writers-block"
 		FileName: "writers-block.md"
