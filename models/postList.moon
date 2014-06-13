@@ -1,6 +1,12 @@
 
 return {
 	{
+		Title: "Extending Sprite Kit classes with swift Protocols"
+		Slug: "swift-protocol-extension"
+		FileName: "swift-protocol-extension.md"
+		PubDate: "June 13, 2014"
+	}
+	{
 		Title: "Embedding lua in .NET"
 		Slug: "lua-dot-net"
 		FileName: "lua-dot-net.md"

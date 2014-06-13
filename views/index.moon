@@ -23,8 +23,9 @@ class Index extends Widget
 
 			div class: 'Disqus', ->
 				unless @errors
-					a class: 'moot', href: 'https://moot.it/i/throw-up/'..@Post.Slug..':S', ->
-						'Comments for this blog entry'
+					@Render 'disqus', @Post.Slug
+					-- a class: 'moot', href: 'https://moot.it/i/throw-up/'..@Post.Slug..':S', ->
+						-- 'Comments for this blog entry'
 
 		aside ->
 			section ->
