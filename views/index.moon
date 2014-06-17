@@ -21,6 +21,9 @@ class Index extends Widget
 				else
 					raw @errors
 
+			div class: 'mailinglist', ->
+				@Render 'maillist'
+
 			div class: 'Disqus', ->
 				unless @errors
 					@Render 'disqus', @Post.Slug

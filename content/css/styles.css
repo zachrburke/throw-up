@@ -40,6 +40,7 @@ header section li i { font-size: 1.35rem; }
 .content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; border-top: none;}
 .content > section small { display: block; margin-bottom: 5px;}
 .content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px; }
+.content > section .mailinglist { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px;}
 
 .content aside { float: left; width: 100%; margin-top: 5px; }
 .content aside a { text-decoration: none; font-size: 0.85rem}
