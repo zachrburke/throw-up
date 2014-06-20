@@ -31,12 +31,14 @@ class Layout extends Widget
 					hgroup ->
 						div ->
 							a href: '/', ->
-								img src: '/content/images/vomit_fountain.png'
+								img class: 'logo', src: '/content/images/vomit_fountain.png'
 							small "var up = new Exception();"
 							h3 ->
 								a href: '/', 'throw up;'
 							nav ->
 								a href: '/me/about', 'About'
+								a href: 'http://feeds.feedburner.com/ThrowUpRss', target: '_blank', ->
+									img src: '/content/images/feed.png'
 
 					section ->
 						 ul ->

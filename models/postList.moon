@@ -1,7 +1,7 @@
 
 return {
 	{
-		Title: "Extending Sprite Kit classes with swift Protocols"
+		Title: "Extending Sprite Kit classes with swift protocols"
 		Slug: "swift-protocol-extension"
 		FileName: "swift-protocol-extension.md"
 		PubDate: "June 13, 2014"

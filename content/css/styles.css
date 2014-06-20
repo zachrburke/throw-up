@@ -25,10 +25,11 @@ header hgroup h3 a:visited { color: black; }
 header hgroup div {  padding: 20px; }
 header hgroup small { display: block; }
 header hgroup nav { margin-top: 10px; }
-header hgroup nav a { text-decoration: none; color: black; margin-right: 20px; background-color: #dedede; border-radius: 10px; padding: 5px 10px; }
+header hgroup nav a:first-child { text-decoration: none; color: black; margin-right: 20px; background-color: #dedede; border-radius: 10px; padding: 5px 10px; }
 header hgroup nav a:hover { color: #77B;}
-header hgroup div img { float: left; border-radius: 37px; border: 1px solid #999;
+header hgroup div img.logo { float: left; border-radius: 37px; border: 1px solid #999;
 margin-right: 15px; margin-top: 15px; opacity: 0.4; height: 64px; width: 64px; }
+header hgroup div nav img { width: 18px; height: 18px; }
 
 header section { width: 10%; float: left; }
 header section li { text-decoration: none; list-style: none; line-height: 1.3; }
