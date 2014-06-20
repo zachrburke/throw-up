@@ -5,6 +5,7 @@ return {
 		Slug: "swift-protocol-extension"
 		FileName: "swift-protocol-extension.md"
 		PubDate: "June 13, 2014"
+		Languages: { 'coffeescript' }
 	}
 	{
 		Title: "Embedding lua in .NET"
@@ -36,7 +37,7 @@ return {
 		Title: "Cleaning up, moonc -t and Guard"
 		Slug: "cleaning-up"
 		FileName: "cleaner-workflow.md"
-		PubDate: "January 4 (barely), 2014"
+		PubDate: "January 4, 2014"
 		Languages: { 'ruby' }
 	}
 	{

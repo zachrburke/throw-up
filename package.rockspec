@@ -5,5 +5,6 @@ dependencies = {
 	"etlua",
 	"lua-discount",
 	"moonscript",
-	"loadkit"
+	"loadkit",
+	"date"
 }

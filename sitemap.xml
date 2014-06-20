@@ -5,9 +5,14 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 <url>
-  <loc>http://www.throw-up.com/some-changes</loc>
+  <loc>http://www.throw-up.com/swift-protocol-extension</loc>
+</url>
+<url>
+  <loc>http://www.throw-up.com/lua-dot-net</loc>
+</url>
+<url>
+  <loc>http://www.throw-up.com/data-representation</loc>
 </url>
 <url>
   <loc>http://www.throw-up.com/me/about</loc>

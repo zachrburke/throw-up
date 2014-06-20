@@ -33,9 +33,9 @@ class Layout extends Widget
 							a href: '/', ->
 								img src: '/content/images/vomit_fountain.png'
 							small "var up = new Exception();"
-							h3  "throw up;"
+							h3 ->
+								a href: '/', 'throw up;'
 							nav ->
-								a href: '/', 'Home'
 								a href: '/me/about', 'About'
 
 					section ->

@@ -10,9 +10,9 @@ class Index extends Widget
 
 			div class: 'metadata', ->
 				if @Post and @errors == nil
-					small 'posted sometime around ' .. @Post.PubDate 
 					h4 @Post.Title
 					@Render 'share', { url: @URL, twitterText: @Title }
+					small 'Published ' .. @Post.PubDate 
 
 			article ->
 				

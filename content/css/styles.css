@@ -9,20 +9,23 @@ blockquote { font-style: italic; border-left: 5px solid #eee; }
 aside, header { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7);}
 
 body { background-color: rgb(245, 245, 245); margin: 0;}
+body { background-image: url('/content/images/background.jpg'); }
 
 pre code { word-wrap: normal; overflow: scroll; display: block; border: 2px solid #CFCFCF;}
 
 a:link { color:#339;}   
 a:hover { color:#333;}  
 
-header { margin: 0 auto .2em; max-width: 1366px; height: 135px; background-color: rgba(255, 255, 255, 0.7);}
+header { margin: 0 auto .2em; max-width: 1366px; height: 135px; background-color: rgba(255, 255, 255, 0.8);}
 
 header hgroup { width: 90%; float: left; }
 header hgroup h3 { margin-bottom: 0; }
+header hgroup h3 a { text-decoration: none; }
+header hgroup h3 a:visited { color: black; }
 header hgroup div {  padding: 20px; }
 header hgroup small { display: block; }
 header hgroup nav { margin-top: 10px; }
-header hgroup nav a { text-decoration: none; color: black; margin-right: 20px; border-bottom: 2px solid black;}
+header hgroup nav a { text-decoration: none; color: black; margin-right: 20px; background-color: #dedede; border-radius: 10px; padding: 5px 10px; }
 header hgroup nav a:hover { color: #77B;}
 header hgroup div img { float: left; border-radius: 37px; border: 1px solid #999;
 margin-right: 15px; margin-top: 15px; opacity: 0.4; height: 64px; width: 64px; }
@@ -37,10 +40,10 @@ header section li i { font-size: 1.35rem; }
 
 .content > section { float: left; width: 100%; }
 .content > section h2 { margin-bottom: 0.425em; border-bottom: 1px solid #bbb; }
-.content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; border-top: none;}
-.content > section small { display: block; margin-bottom: 5px;}
-.content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px; }
-.content > section .mailinglist { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; margin-top: 5px;}
+.content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-top: none;}
+.content > section small { display: block; margin-top: 5px; font-size: 14px; font-style: italic; }
+.content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin-top: 5px; }
+.content > section .mailinglist { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin-top: 5px;}
 
 .content aside { float: left; width: 100%; margin-top: 5px; }
 .content aside a { text-decoration: none; font-size: 0.85rem}
