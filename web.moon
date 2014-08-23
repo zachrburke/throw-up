@@ -1,5 +1,3 @@
-import capture_errors, yield_error from require 'lapis.application'
-
 lapis = require 'lapis'
 discount = require 'discount'
 config = require('lapis.config').get!
