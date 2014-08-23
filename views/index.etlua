@@ -1,0 +1,39 @@
+<% util = require('lapis.util') %>
+<section>
+	<div class='metadata'>
+		<h4><%= Post.Title %></h4>
+		<% render('views.shared.sharebuttons', { url = URL, twitterText = Title }) %>
+		<small>Published <%= Post.PubDate %></small>
+	</div>
+	<article><%- PostBody %></article>
+	<div class='mailinglist'>
+		<% render('views.shared.mailinglist') %>
+	</div>
+	<aside>
+		<section>
+		<% for i, post in ipairs(PostList) do %>
+			<div class='headline'>
+				<% if post.Slug == Post.Slug then %>
+					<a href='<%= post.Slug %>' class='selected'>
+				<% else %>
+					<a href='<%= post.Slug %>'> 
+				<% end %>
+						<%= post.Title %>
+					</a>
+				<small><%= post.PubDate %></small>
+			</div>
+		<% end %>
+		</section>
+	</aside>
+</section>
+<% if Post.Languages then %>
+<script src='/content/js/highlight.pack.js'></script>
+<script>
+	var languages = <%- util.to_json(Post.Languages) %>;
+	hljs.configure({
+		languages: languages
+	});
+	hljs.initHighlightingOnLoad();
+</script>
+<% end %>
+

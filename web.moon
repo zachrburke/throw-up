@@ -10,9 +10,8 @@ lapis.serve class extends lapis.Application
 	@include 'applications.me'
 	@include 'applications.blog'
 
-	new: =>
-		super!
-		@templates = require 'templates'
+	@before_filter =>
+		@env = config._name
 
 	handle_404: => 
 		@PostList = require 'models.postList'

@@ -1,0 +1,68 @@
+<html lang='en'>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/content/css/typeplate.css">
+	<link rel="stylesheet" type="text/css" href="/content/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="/content/css/default.css">
+	<link rel="stylesheet" type="text/css" href="/content/css/socialicious.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+	<link rel="icon" href="/content/images/barf.ico">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="/content/images/vomit_fountain.png" itemprop="image" property="og:image">
+
+	<title>
+		<% if Title then %> <%= Title %> <% else %> throw up; <% end %>
+	</title>
+</head>
+<body>
+	<header>
+		<hgroup>
+			<div>
+				<a href='/'>
+					<img class='logo' src='/content/images/vomit_fountain.png' />
+				</a>
+				<h3>
+					<a href='/'>throw up;</a>
+				</h3>
+				<nav>
+					<a href='/me/about'>About</a>
+					<a href='http://feeds.feedburner.com/ThrowUpRss' target='_blank'>
+						<img src='/content/images/feed.png' />
+					</a>
+				</nav>
+			</div>
+		</hgroup>
+		<section>
+			<ul>
+				<li>
+					<a href='http://twitter.com/zach_no_beard' target='_blank'>
+						<i class='icon-twitter'></i>
+					</a>
+				</li>
+				<li>
+					<a href='https://github.com/zach-binary' target='_blank'>
+						<i class='icon-github'></i>
+					</a>
+				</li>
+				<li>
+					<a href='http://ren.itch.io' target='_blank'>
+						<img src='/content/images/itchio_icon.png' />
+					</a>
+				</li>
+			</ul>
+		</section>
+	</header>
+	<section class='content'>
+		<% content_for('inner') %>		
+	</section>
+	<footer>
+		<small>
+			powered by <a href='http://leafo.net/lapis'>lapis</a>
+		</small>
+	</footer>
+	<% if env ~= 'development' then %> 
+		<% render('views.shared.google_analytics') %>
+	<% end %>
+</body>
+</html>

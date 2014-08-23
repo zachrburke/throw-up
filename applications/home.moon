@@ -23,4 +23,7 @@ class HomeApplication extends require('lapis').Application
 			render: true, layout: 'layout'
 	}
 
+	[editor: '/:slug/edit']: =>
+		'Editor goes here'
+
 	
