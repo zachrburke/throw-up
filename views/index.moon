@@ -9,17 +9,12 @@ class Index extends Widget
 		section ->
 
 			div class: 'metadata', ->
-				if @Post and @errors == nil
-					h4 @Post.Title
-					@Render 'share', { url: @URL, twitterText: @Title }
-					small 'Published ' .. @Post.PubDate 
+				h4 @Post.Title
+				@Render 'share', { url: @URL, twitterText: @Title }
+				small 'Published ' .. @Post.PubDate 
 
 			article ->
-				
-				if @Post and @errors == nil
-					raw @PostBody
-				else
-					raw @errors
+				raw @PostBody
 
 			div class: 'mailinglist', ->
 				@Render 'maillist'

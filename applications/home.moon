@@ -1,4 +1,4 @@
-import respond_to, capture_errors from require 'lapis.application'
+import respond_to from require 'lapis.application'
 import find from require 'underscore'
 
 class HomeApplication extends require('lapis').Application
@@ -15,7 +15,7 @@ class HomeApplication extends require('lapis').Application
 
 			unless @Post then @write status: 404, render: 'error', layout: 'layout'
 
-		GET: capture_errors =>
+		GET: =>
 			@Title = @Post.Title
 			@PostBody = @app\GetPostBodyByName @Post.FileName
 			@URL = @req.built_url
