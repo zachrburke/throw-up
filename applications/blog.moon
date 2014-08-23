@@ -1,9 +1,8 @@
 import render_html from require 'lapis.html'
 
 class Blog extends require('lapis').Application 
-	@path: '/blog'
 
-	[atom: "/feed.atom"]: =>
+	[atom: "/blog/feed.atom"]: =>
 		postList = require 'models.postList'
 		date = require 'date'
 

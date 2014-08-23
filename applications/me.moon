@@ -1,12 +1,11 @@
 lapis = require 'lapis'
 
 class MeApplication extends lapis.Application
-	@path: '/me'
 
-	[about: '/about']: =>
+	[about: '/me/about']: =>
 		@Title = "About"
 		render: 'me.about', layout: 'layout'
 
-	[portfolio: '/portfolio']: =>
+	[portfolio: '/me/portfolio']: =>
 		@Title = "Portfolio"
 		render: 'me.portfolio', layout: 'layout'
