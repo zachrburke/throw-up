@@ -1,51 +1,26 @@
-import capture_errors, yield_error from require 'lapis.application'
-import render_html from require 'lapis.html'
+import respond_to, capture_errors from require 'lapis.application'
+import find from require 'underscore'
 
-lapis = require 'lapis'
-_ = require 'underscore'
-PostList = require 'models.postList'
-config = require('lapis.config').get!
-date = require 'date'
-
-class HomeApplication extends lapis.Application
+class HomeApplication extends require('lapis').Application
 
 	[loopback: '/']: =>
-		redirect_to: @url_for 'index', slug: PostList[1].Slug
+		redirect_to: @url_for 'index', slug: require('models.postList')[1].Slug
 
-	[index: "/:slug"]: capture_errors =>
+	[index: "/:slug"]: respond_to {
 
-		@PostList = PostList
-		@Post = _.find PostList, (post) ->
-			return post.Slug == @params.slug
+		before: =>
+			@PostList = require 'models.postList'
+			@Post = find @PostList, (post) ->
+				return post.Slug == @params.slug
 
-		unless @Post then @app\ThrowUp!
-		
-		@Title = @Post.Title
-		@PostBody = @app\GetPostBodyByName @Post.FileName
-		@URL = @req.built_url
+			unless @Post then @write status: 404, render: 'error', layout: 'layout'
 
-		render: true, layout: 'layout'
+		GET: capture_errors =>
+			@Title = @Post.Title
+			@PostBody = @app\GetPostBodyByName @Post.FileName
+			@URL = @req.built_url
 
-	[atom: "/blog/feed.atom"]: =>
-		xml = render_html ->
-			feed xmlns: 'http://www.w3.org/2005/Atom', ->
-				link href: 'http://throw-up.com/blog/feed.atom', rel: 'self'
-				title 'Throw Up RSS'
-				updated date(PostList[1].PubDate)\fmt('%Y-%m-%dT%H:%M:%SZ')
-				author ->
-					name 'Zach Burke'
-				id 'http://throw-up.com/'
-
-				for i, post in ipairs PostList
-					entry ->
-						title post.Title
-						link href: "http://throw-up.com/#{post.Slug}"
-						id "http://throw-up.com/#{post.Slug}"
-						updated date(post.PubDate)\fmt('%Y-%m-%dT%H:%M:%SZ')
-						content type: 'html', @app\GetPostBodyByName post.FileName
-
-		@res.headers["Content-Type"] = "application/xml"
-		layout: false, xml 
-
+			render: true, layout: 'layout'
+	}
 
 	

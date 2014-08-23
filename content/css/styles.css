@@ -81,6 +81,9 @@ section.GameTitleRight > div { min-height: 250px; border: 1px solid #bbb; paddin
 section.ImageReel { clear:both; margin-top: 10px; min-height: 290px; }
 section.ImageReel img { width: 33.3%; min-width: 212px; height: 256px; float: left; border: 1px solid #999; }
 
+.editor { position: relative; height: 0; padding-bottom: 90%; }
+.editor iframe { position: absolute; left: 0; top: 0; width: 99%; height: 99%; }
+
 @media(max-width: 480px) {
 	section.GameTitleLeft > div img { width: 100%; }
 	section.GameTitleRight > div img { width: 100%; }

@@ -1,0 +1,12 @@
+<section>
+	<article>
+		<p>Ooops!  Looks like I haven't written that one yet</p>
+		<p>Lost?  Try reading one of these fine articles!</p>
+		<ul>
+		<% for i, post in pairs(PostList) do %>
+			<li>
+				<a href='<%= post.Slug %>'><%= post.Title %></a>
+			</li>
+		<% end %>
+	</article>
+</section>
