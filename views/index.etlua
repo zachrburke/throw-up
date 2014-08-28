@@ -1,11 +1,10 @@
-<% util = require('lapis.util') %>
 <section>
 	<div class='metadata'>
-		<h4><%= Post.Title %></h4>
+		<h4><%= Post.title %></h4>
 		<% render('views.shared.sharebuttons', { url = URL, twitterText = Title }) %>
-		<small>Published <%= Post.PubDate %></small>
+		<small>Published <%= Post.pub_date %></small>
 	</div>
-	<article><%- PostBody %></article>
+	<article><%- Post.body %></article>
 	<div class='mailinglist'>
 		<% render('views.shared.mailinglist') %>
 	</div>
@@ -13,23 +12,23 @@
 		<section>
 		<% for i, post in ipairs(PostList) do %>
 			<div class='headline'>
-				<% if post.Slug == Post.Slug then %>
-					<a href='<%= post.Slug %>' class='selected'>
+				<% if post.slug == Post.slug then %>
+					<a href='/<%= post.slug %>' class='selected'>
 				<% else %>
-					<a href='<%= post.Slug %>'> 
+					<a href='/<%= post.slug %>'> 
 				<% end %>
-						<%= post.Title %>
+						<%= post.title %>
 					</a>
-				<small><%= post.PubDate %></small>
+				<small><%= post.pub_date %></small>
 			</div>
 		<% end %>
 		</section>
 	</aside>
 </section>
-<% if Post.Languages then %>
+<% if Post.languages then %>
 <script src='/content/js/highlight.pack.js'></script>
 <script>
-	var languages = <%- util.to_json(Post.Languages) %>;
+	var languages = <%- Post.languages %>;
 	hljs.configure({
 		languages: languages
 	});

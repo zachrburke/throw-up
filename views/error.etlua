@@ -5,7 +5,7 @@
 		<ul>
 		<% for i, post in pairs(PostList) do %>
 			<li>
-				<a href='<%= post.Slug %>'><%= post.Title %></a>
+				<a href='/<%= post.slug %>'><%= post.title %></a>
 			</li>
 		<% end %>
 	</article>

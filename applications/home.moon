@@ -1,24 +1,24 @@
 import respond_to from require 'lapis.application'
-import find from require 'underscore'
+import to_json from require 'lapis.util'
+import Articles from require 'models.articles'
 
 class HomeApplication extends require('lapis').Application
 
 	[loopback: '/']: =>
-		redirect_to: @url_for 'index', slug: require('models.postList')[1].Slug
+		redirect_to: @url_for 'index', slug: Articles\getLatestPostSlug!
 
 	[index: "/:slug"]: respond_to {
 
 		before: =>
-			@PostList = require 'models.postList'
-			@Post = find @PostList, (post) ->
-				return post.Slug == @params.slug
+			@PostList = Articles\getPostList!
+			@Post = Articles\getArticleBySlug @params.slug
 
 			unless @Post then @write status: 404, render: 'error', layout: 'layout'
 
 		GET: =>
-			@Title = @Post.Title
-			@PostBody = @app\GetPostBodyByName @Post.FileName
+			@Title = @Post.title
 			@URL = @req.built_url
+			@Post.languages = to_json @Post.languages
 
 			render: true, layout: 'layout'
 	}

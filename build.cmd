@@ -27,10 +27,6 @@ cp -R content bin/
 
 
 echo ''
-echo 'Copying templates directory'
-cp -R templates bin/
-
-echo ''
 echo 'Copying sitemap.xml'
 cp sitemap.xml bin/sitemap.xml
 
