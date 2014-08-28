@@ -40,3 +40,4 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo 'Mac detected, using rsync'
 	find views/ -name \*.etlua -exec rsync -R {} bin/ \;
 fi
+
