@@ -62,6 +62,7 @@
 		</small>
 	</footer>
 	<% if env ~= 'development' then %> 
+		<% render('views.shared.google_analytics') %>
 	<% end %>
 </body>
 </html>
