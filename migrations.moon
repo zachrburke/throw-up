@@ -4,6 +4,13 @@ db = require 'lapis.db'
 util = require 'lapis.util'
 
 {
+	[1234]: =>
+		return false
+}
+
+return
+
+{
   	[1409023234219]: =>
 	    create_table "articles", {
 	      { "id", types.serial }
@@ -25,11 +32,11 @@ util = require 'lapis.util'
 			path = config.blogFilePath .. post.FileName
 			io.input path
 			db.insert 'articles', {
-				title: post.Title
-				slug: post.Slug
+				title: post.title
+				slug: post.slug
 				body: discount(io.read '*all')
-				pub_date: post.PubDate
-				languages: util.to_json(post.Languages)
+				pub_date: post.pub_date
+				languages: util.to_json(post.languages)
 			}
 
 }
