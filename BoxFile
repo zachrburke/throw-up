@@ -1,0 +1,8 @@
+# rock dependencies
+underscore
+lapis
+etlua
+lua-discount
+moonscript
+loadkit
+date

@@ -8,3 +8,4 @@ debug/
 content/.DS_Store
 run.cmd
 bin/
+.moonbox
