@@ -4,13 +4,6 @@ db = require 'lapis.db'
 util = require 'lapis.util'
 
 {
-	[1234]: =>
-		return false
-}
-
-return
-
-{
   	[1409023234219]: =>
 	    create_table "articles", {
 	      { "id", types.serial }
