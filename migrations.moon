@@ -18,7 +18,7 @@ util = require 'lapis.util'
 
 	[1409024253675]: =>
 		discount = require 'discount'
-		postList = require 'models.postList'
+		postList = require 'repo.postList'
 		config = require('lapis.config').get!
 
 		for i, post in ipairs(postList)
