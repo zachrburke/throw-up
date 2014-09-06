@@ -30,7 +30,7 @@ class Articles extends Model
 		return postList
 
 	getLatestPostSlug: ->
-		local postList
+		local slug
 
 		status, error = pcall ->
 			slug = db.select([[slug from articles order by id desc limit 1]]).slug
