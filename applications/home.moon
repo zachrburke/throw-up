@@ -1,17 +1,18 @@
 import respond_to from require 'lapis.application'
 import to_json from require 'lapis.util'
-import Articles from require 'models.articles'
+
+articleRepo = require 'repo.articleRepo'
 
 class HomeApplication extends require('lapis').Application
 
 	[loopback: '/']: =>
-		redirect_to: @url_for 'index', slug: Articles\getLatestPostSlug!
+		redirect_to: @url_for 'index', slug: articleRepo.getLatestPostSlug!
 
 	[index: "/:slug"]: respond_to {
 
 		before: =>
-			@PostList = Articles\getPostList!
-			@Post = Articles\getArticleBySlug @params.slug
+			@PostList = articleRepo.getPostList!
+			@Post = articleRepo.getArticleBySlug @params.slug
 
 			unless @Post then @write status: 404, render: 'error', layout: 'layout'
 
@@ -23,7 +24,14 @@ class HomeApplication extends require('lapis').Application
 			render: true, layout: 'layout'
 	}
 
-	[editor: '/:slug/edit']: =>
-		'Editor goes here'
+	[editor: '/:slug/edit']: respond_to {
+
+		GET: =>
+			@Post = articleRepo.getArticleBySlug @params.slug
+			unless @Post then @write status: 404, render: 'error', layout: 'layout'
+			@Title = @Post.title..' / Edit'
+
+			render: 'home.editor', layout: 'layout'
+	}
 
 	

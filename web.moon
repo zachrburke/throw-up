@@ -1,8 +1,7 @@
-import Articles from require 'models.articles'
-
 lapis = require 'lapis'
 discount = require 'discount'
 config = require('lapis.config').get!
+articleRepo = require 'repo.articleRepo'
 
 lapis.serve class extends lapis.Application
 	@enable 'etlua'
@@ -14,5 +13,5 @@ lapis.serve class extends lapis.Application
 		@env = config._name
 
 	handle_404: => 
-		@PostList = Articles\getPostList!
+		@PostList = articleRepo.getPostList!
 		@write status: 404, render: 'error', layout: 'layout'

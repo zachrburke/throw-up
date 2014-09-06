@@ -1,0 +1,8 @@
+<section>
+	<div class='metadata'>
+		<h4 contenteditable><%= Post.title %></h4>
+		<small contenteditable>Published <%= Post.pub_date %></small>
+	</div>
+	<article contenteditable><%- Post.body %></article>
+</section>
+

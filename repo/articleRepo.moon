@@ -1,12 +1,14 @@
 import Model from require 'lapis.db.model'
-import getOldPostBySlug, oldPostList from require 'repo.oldPostRepo'
+import getOldPostBySlug, getOldAtomFeed, oldPostList from require 'repo.oldPostRepo'
 
 date = require 'date'
 db = require 'lapis.db'
 
 class Articles extends Model
-	@getArticleBySlug: (slug) =>
-		post = nil
+
+{
+	getArticleBySlug: (slug) ->
+		local post
 
 		status, error = pcall ->
 			post = Articles\find slug: slug
@@ -17,8 +19,8 @@ class Articles extends Model
 
 		return post
 
-	@getPostList: =>
-		postList = nil
+	getPostList: ->
+		local postList
 
 		status, error = pcall ->
 			postList = db.select([[title, slug, to_char(pub_date, 'Mon DD, YYYY') as pub_date from articles]])
@@ -27,16 +29,23 @@ class Articles extends Model
 
 		return postList
 
-	@getLatestPostSlug: =>
-		slug = nil
+	getLatestPostSlug: ->
+		local postList
 
 		status, error = pcall ->
-			slug = db.select('slug from articles order by id desc limit 1').slug
+			slug = db.select([[slug from articles order by id desc limit 1]]).slug
 
 		unless slug then slug = oldPostList[1].slug
 
 		return slug
 
-return { 
-	Articles: Articles
+	getAtomFeed: ->
+		local postList
+
+		status, error = pcall ->
+			postList = Articles\select!
+
+		unless postList then postList = getOldAtomFeed!
+
+		return postList
 }

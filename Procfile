@@ -1,1 +1,0 @@
-web: bash build.cmd; cd bin; lapis migrate production --trace; lapis server production
