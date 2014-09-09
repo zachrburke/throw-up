@@ -1,5 +1,6 @@
 import respond_to from require 'lapis.application'
 import to_json from require 'lapis.util'
+import cached from require 'lapis.cache'
 
 articleRepo = require 'repo.articleRepo'
 

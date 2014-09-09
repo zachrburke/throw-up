@@ -1,3 +1,16 @@
+<% function scripts() %>
+	<% if Post.languages then %>
+		<script src='/content/js/highlight.pack.js'></script>
+		<script>
+			var languages = <%- Post.languages %>;
+			hljs.configure({
+				languages: languages
+			});
+			hljs.initHighlightingOnLoad();
+		</script>
+	<% end %>
+<% end %>
+
 <section>
 	<div class='metadata'>
 		<h4><%= Post.title %></h4>
@@ -25,14 +38,6 @@
 		</section>
 	</aside>
 </section>
-<% if Post.languages then %>
-<script src='/content/js/highlight.pack.js'></script>
-<script>
-	var languages = <%- Post.languages %>;
-	hljs.configure({
-		languages: languages
-	});
-	hljs.initHighlightingOnLoad();
-</script>
-<% end %>
 
+<!-- make this use content_for('javascript', scripts) when that works -->
+<% scripts() %>

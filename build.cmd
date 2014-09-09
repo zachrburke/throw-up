@@ -30,7 +30,6 @@ echo ''
 echo 'Copying sitemap.xml'
 cp sitemap.xml bin/sitemap.xml
 
-echo ''
 echo 'Copying etlua files'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -41,3 +40,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	find views/ -name \*.etlua -exec rsync -R {} bin/ \;
 fi
 
+echo ''
+echo 'Concatenating css files'
+cd bin/content/css; cat typeplate.css styles.css default.css socialicious.css > all.css
