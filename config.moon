@@ -2,7 +2,7 @@ import config from require 'lapis.config'
 
 config 'development', ->
 	port 8080
-	code_cache 'on'
+	code_cache 'off'
 	server_name 'dev.throw-up.com'
 
 	blogFilePath 'content/blog/'
