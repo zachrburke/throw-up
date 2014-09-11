@@ -1,70 +1,66 @@
+html, body { height: 100%; }
+
 hgroup, .content > section, aside, header, header section, section.ImageReel img {
 	-webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 blockquote { font-style: italic; border-left: 5px solid #eee; }
 
-aside, header { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7);}
+aside, header { background-color: rgba(255, 255, 255, 1.0);}
 
 body { background-color: rgb(245, 245, 245); margin: 0;}
-body { background-image: url('/content/images/background.jpg'); }
+body { background-image: url('/content/images/stardust.png'); }
 
 pre code { word-wrap: normal; overflow: scroll; display: block; border: 2px solid #CFCFCF;}
 
 a:link { color:#339;}   
 a:hover { color:#333;}  
 
-header { margin: 0 auto .2em; max-width: 1366px; height: 135px; background-color: rgba(255, 255, 255, 0.8);}
+.wrapper { min-height: 100%; }
 
-header hgroup { width: 90%; float: left; }
-header hgroup h3 { margin-bottom: 0; }
-header hgroup h3 a { text-decoration: none; }
-header hgroup h3 a:visited { color: black; }
-header hgroup div {  padding: 20px; }
-header hgroup small { display: block; }
-header hgroup nav { margin-top: 10px; }
-header hgroup nav a:first-child { text-decoration: none; color: black; margin-right: 20px; background-color: #dedede; border-radius: 10px; padding: 5px 10px; }
-header hgroup nav a:hover { color: #77B;}
-header hgroup div img.logo { float: left; border-radius: 37px; border: 1px solid #999;
-margin-right: 15px; margin-top: 15px; opacity: 0.4; height: 64px; width: 64px; }
-header hgroup div nav img { width: 18px; height: 18px; }
+header { margin: 0 auto .2em; height: 90px; background-color: rgba(255, 255, 255, 1.0);}
+header nav { max-width: 1366px; margin: 0 auto; padding: 10px; }
+header nav h3 { float: left; margin-top: 10px;}
+header nav h3 a { text-decoration: none; }
+header nav h3 a:visited { color: black; }
+header nav small { display: block; }
+header nav img.logo { float: left; border-radius: 37px; border: 1px solid #999; margin-right: 15px; opacity: 0.4; height: 64px; width: 64px; }
+header nav img.feedicon { width: 24px; height: 24px; margin-top: 17px; margin-left: 10px; }
 
-header section { width: 10%; float: left; }
-header section li { text-decoration: none; list-style: none; line-height: 1.3; }
-header section ul { float: right; padding-right: 20px; margin: 16px 0;}
-header section li img { width: 28px; height: 28px; }
-header section li i { font-size: 1.35rem; }
+.content { max-width: 1366px; margin: 0 auto; }
 
-.content { max-width: 1366px; margin: 0 auto 10px; }
-
-.content > section { float: left; width: 100%; }
-.content > section h2 { margin-bottom: 0.425em; border-bottom: 1px solid #bbb; }
-.content > section article { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-top: none;}
+.content > section { float: left; width: 75%; padding-right: 5px; margin-bottom: 5px; }
+.content > section h2 { margin-bottom: 0.425em; border }
+.content > section article { background-color: rgba(255, 255, 255, 1.0); padding: 20px; border-top: none;}
 .content > section small { display: block; margin-top: 5px; font-size: 14px; font-style: italic; }
-.content > section .Disqus { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin-top: 5px; }
-.content > section .mailinglist { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin-top: 5px;}
+.content > section .Disqus { background-color: rgba(255, 255, 255, 1.0); padding: 20px; margin-top: 5px; }
+.content > section .mailinglist { background-color: rgba(255, 255, 255, 1.0); padding: 20px; margin-top: 5px;}
 
-.content aside { float: left; width: 100%; margin-top: 5px; }
+.content aside { float: left; width: 25%; margin-bottom: 5px; }
 .content aside a { text-decoration: none; font-size: 0.85rem }
 .content aside small { display: block; }
 .content aside section { padding: 20px; }
-.content aside .headline { float: left; margin: 5px 0; width: 50%; min-width: 300px; }
-.content aside { margin-bottom: 15px; }
+.content aside section .feedicon { width: 16px; height: 16px; margin-left: 2px; }
+.content aside div { padding: 5px 0; }
+.content aside h5 { margin-bottom: 2px; }
 
-.content .metadata { border: 1px solid #ddd; background-color: rgba(255, 255, 255, 0.7); padding: 20px; border-bottom: none; }
+.content .metadata { background-color: rgba(255, 255, 255, 1.0); padding: 20px; border-bottom: none; }
 .content .metadata h4 { display: inline; }
 
-.content .ShareIcons { float: right; }
-.content .ShareIcons a { text-decoration: none; }
+.content .share { background-color: rgba(255, 255, 255, 1.0); padding: 5px; text-align: center; }
+.content .ShareIcons a { text-decoration: none; padding: 5px; }
 .content .ShareIcons i { margin-left: 2px; font-size: 1.2rem; }
 
 [contenteditable]:active, [contenteditable]:focus { border: none; outline: none; }
 
 .selected { background-color: #eee; }
 
-footer { clear: both; max-width: 1366px; margin: 0 auto 10px; padding-left: 20px; }
+footer { text-align: center; width: 100%; background-color: rgba(255, 255, 255, 1.0); height: 40px; margin-top: -60px; clear: both; padding-top: 3px; }
+footer a { text-decoration: none; padding: 0 2px; }
+footer p { margin-bottom: 2px; display: inline; }
+footer img { width: 18px; height: 18px; }
 
 article.About span { display: block; margin-bottom: 15px; }
 article.About h5 { border-bottom: 1px solid #bbb; padding-bottom: 5px; }
@@ -82,6 +78,16 @@ section.GameTitleRight > div { min-height: 250px; border: 1px solid #bbb; paddin
 
 section.ImageReel { clear:both; margin-top: 10px; min-height: 290px; }
 section.ImageReel img { width: 33.3%; min-width: 212px; height: 256px; float: left; border: 1px solid #999; }
+
+@media(max-width: 768px) {
+	.content aside { width: 100%; }
+	.content > section { width: 100%; padding-right: 0; }
+}
+
+@media(max-width: 568px) {
+	footer { height: 70px; margin-top: -90px; }
+	footer p { display: block; }
+}
 
 @media(max-width: 480px) {
 	section.GameTitleLeft > div img { width: 100%; }

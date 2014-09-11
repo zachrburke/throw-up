@@ -26,10 +26,6 @@ echo 'Copying content directory'
 cp -R content bin/
 
 
-echo ''
-echo 'Copying sitemap.xml'
-cp sitemap.xml bin/sitemap.xml
-
 echo 'Copying etlua files'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -42,4 +38,4 @@ fi
 
 echo ''
 echo 'Concatenating css files'
-cd bin/content/css; cat typeplate.css styles.css default.css socialicious.css > all.css
+cd bin/content/css; cat typeplate.css styles.css animations.css default.css socialicious.css > all.css

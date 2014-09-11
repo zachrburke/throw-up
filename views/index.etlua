@@ -14,30 +14,49 @@
 <section>
 	<div class='metadata'>
 		<h4><%= Post.title %></h4>
-		<% render('views.shared.sharebuttons', { url = URL, twitterText = Title }) %>
 		<small>Published <%= Post.pub_date %></small>
 	</div>
 	<article><%- Post.body %></article>
-	<div class='mailinglist'>
-		<% render('views.shared.mailinglist') %>
+	<div class='share'>
+		<% render('views.shared.sharebuttons', { url = URL, twitterText = Title }) %>
 	</div>
-	<aside>
-		<section>
-		<% for i, post in ipairs(PostList) do %>
-			<div class='headline'>
-				<% if post.slug == Post.slug then %>
-					<a href='/<%= post.slug %>' class='selected'>
-				<% else %>
-					<a href='/<%= post.slug %>'> 
-				<% end %>
-						<%= post.title %>
-					</a>
-				<small><%= post.pub_date %></small>
-			</div>
-		<% end %>
-		</section>
-	</aside>
 </section>
+<aside>
+	<section class='about'>
+		<h5>About Me</h5>
+		<hr/>
+		<p>
+			I am a .NET developer that likes to tinker in lua and other languages.  I make games too!
+			<a href='/me/about'>read more</a>
+		</p>
+		<ul>
+			<li>
+				<a href="http://feedburner.google.com/fb/a/mailverify?uri=ThrowUpRss&amp;loc=en_US" target="_blank">Get email updates</a>
+			</li>
+			<li>
+				<a href='http://feeds.feedburner.com/ThrowUpRss' target="_blank">
+					RSS Feed <img class='feedicon' src='/content/images/feed.png' /> 
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h5>Archive</h5>
+		<hr />
+	<% for i, post in ipairs(PostList) do %>
+		<div class='headline'>
+			<% if post.slug == Post.slug then %>
+				<a href='/<%= post.slug %>' class='selected'>
+			<% else %>
+				<a href='/<%= post.slug %>'> 
+			<% end %>
+					<%= post.title %>
+				</a>
+			<small><%= post.pub_date %></small>
+		</div>
+	<% end %>
+	</section>
+</aside>
 
 <!-- make this use content_for('javascript', scripts) when that works -->
 <% scripts() %>

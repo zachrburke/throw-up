@@ -11,50 +11,45 @@
 	</title>
 </head>
 <body>
-	<header>
-		<hgroup>
-			<div>
+	<div class='wrapper'>
+		<header>
+			<nav>
 				<a href='/'>
 					<img class='logo' src='/content/images/vomit_fountain.png' />
 				</a>
 				<h3>
-					<a href='/'>throw up;</a>
+					<a href='/'><span class='glitch'>throw up</span>;<span class='blink'>_</span></a>
 				</h3>
-				<nav>
-					<a href='/me/about'>About</a>
-					<a href='http://feeds.feedburner.com/ThrowUpRss' target='_blank'>
-						<img src='/content/images/feed.png' />
-					</a>
-				</nav>
-			</div>
-		</hgroup>
-		<section>
-			<ul>
-				<li>
-					<a href='http://twitter.com/zach_no_beard' target='_blank'>
-						<i class='icon-twitter'></i>
-					</a>
-				</li>
-				<li>
-					<a href='https://github.com/zach-binary' target='_blank'>
-						<i class='icon-github'></i>
-					</a>
-				</li>
-				<li>
-					<a href='http://ren.itch.io' target='_blank'>
-						<img src='/content/images/itchio_icon.png' />
-					</a>
-				</li>
-			</ul>
+				<a href='http://feeds.feedburner.com/ThrowUpRss' target="_blank">
+					<img class='feedicon' src='/content/images/feed.png' />
+				</a>
+			</nav>
+		</header>
+		<section class='content'>
+			<% content_for('inner') %>		
 		</section>
-	</header>
-	<section class='content'>
-		<% content_for('inner') %>		
-	</section>
+	</div>
 	<footer>
-		<small>
-			powered by <a href='http://leafo.net/lapis'>lapis</a>
-		</small>
+		<p>
+			&copy; Zach Burke &middot; made with 
+			<a href='http://leafo.net/lapis'>lapis</a> &middot; 
+			<a href='http://github.com/zach-binary/throw-up'>source</a> 
+		</p>
+		<p>
+			&middot; follow me &middot;
+			<a href='http://twitter.com/zach_no_beard' target='_blank'>
+				<i class='icon-twitter'></i>
+			</a>
+			<a href='https://github.com/zach-binary' target='_blank'>
+				<i class='icon-github'></i>
+			</a>
+			<a href='http://ren.itch.io' target='_blank'>
+				<img src='/content/images/itchio_icon.png' />
+			</a>
+			<a href='http://feeds.feedburner.com/ThrowUpRss' target="_blank">
+				<img src='/content/images/feed.png' />
+			</a>
+		</p>
 	</footer>
 	<% if env ~= 'development' then %> 
 		<% render('views.shared.google_analytics') %>
