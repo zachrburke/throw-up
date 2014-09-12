@@ -23,7 +23,8 @@ class Articles extends Model
 		local postList
 
 		status, error = pcall ->
-			postList = db.select([[title, slug, to_char(pub_date, 'Mon DD, YYYY') as pub_date from articles]])
+			postList = db.select([[title, slug, to_char(pub_date, 'Mon DD, YYYY') as pub_date 
+									from articles order by id desc]])
 
 		unless postList then postList = oldPostList
 

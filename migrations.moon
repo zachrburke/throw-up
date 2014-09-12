@@ -2,6 +2,8 @@ import create_table, types from require 'lapis.db.schema'
 
 db = require 'lapis.db'
 util = require 'lapis.util'
+moses = require 'moses'
+oldPostRepo = require 'repo.oldPostRepo'
 
 {
   	[1409023234219]: =>
@@ -32,4 +34,14 @@ util = require 'lapis.util'
 				languages: util.to_json(post.languages)
 			}
 
+	[1410478274699]: =>
+		db.query 'TRUNCATE articles'
+		for i, post in ipairs moses.reverse(oldPostRepo.getOldAtomFeed!)
+			db.insert 'articles', {
+				title: post.title
+				slug: post.slug
+				body: post.body
+				pub_date: post.pub_date
+				languages: util.to_json(post.languages)
+			}
 }
