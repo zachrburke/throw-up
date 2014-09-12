@@ -44,7 +44,7 @@ class Articles extends Model
 		local postList
 
 		status, error = pcall ->
-			postList = Articles\select!
+			postList = Articles\select 'from articles order by id desc'
 
 		unless postList then postList = getOldAtomFeed!
 
