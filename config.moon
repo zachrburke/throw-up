@@ -7,6 +7,12 @@ config 'development', ->
 
 	blogFilePath 'content/blog/'
 
+	githubClientId 'your github application client id'
+	githubClientSecret 'your github application client secret'
+	githubOwner 'your github username'
+	
+	hostUrl 'http://dev.throw-up.com:8080' --as configured in github
+
 	postgres ->
 		backend 'pgmoon'
 		host '127.0.0.1'

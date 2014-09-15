@@ -1,6 +1,7 @@
 import respond_to from require 'lapis.application'
-import to_json from require 'lapis.util'
+import to_json, encode_query_string from require 'lapis.util'
 import cached from require 'lapis.cache'
+import require_github_auth from require 'auth.github'
 
 articleRepo = require 'repo.articleRepo'
 
@@ -26,6 +27,8 @@ class HomeApplication extends require('lapis').Application
 	}
 
 	[editor: '/:slug/edit']: respond_to {
+
+		before: require_github_auth =>
 
 		GET: =>
 			@Post = articleRepo.getArticleBySlug @params.slug
