@@ -22,7 +22,7 @@ a:hover { color:#333;}
 
 header { margin: 0 auto .2em; height: 90px; background-color: rgba(255, 255, 255, 1.0);}
 header nav { max-width: 1366px; margin: 0 auto; padding: 10px; }
-header nav h3 { float: left; margin-top: 10px;}
+header nav h3 { float: left; margin-top: 10px; padding: 0 5px;}
 header nav h3 a { text-decoration: none; }
 header nav h3 a:visited { color: black; }
 header nav small { display: block; }
@@ -96,6 +96,7 @@ section.ImageReel img { width: 33.3%; min-width: 212px; height: 256px; float: le
 	section.GameTitleRight > div h6 { clear: both; padding-top: 10px; }
 	section.ImageReel img { width: 100%; }
 	section.ImageReel { min-height: 700px; }
+	header span.blink { display: none; }
 }
 
 .itchio-play {

@@ -22,7 +22,6 @@ lapis.serve class extends lapis.Application
 	@before_filter =>
 		@env = config._name
 		@authUrl = config.authUrl
-		@ghClientID = '08c4703f542cbe286fdf'
 
 	handle_404: => 
 		@PostList = articleRepo.getPostList!
